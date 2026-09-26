@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7555d98863a42d9409bfc8087d4cca87, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::RSO_PlayerRuntime
-  isGrounded: 0
+  isGrounded: 1
   jumpVelocityForce: 0
   grounded: 0
+  isUnderGround: 0

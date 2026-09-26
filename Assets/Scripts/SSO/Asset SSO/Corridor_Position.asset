@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0ffa9bcb9013a488e51bc06b9a2992, type: 3}
   m_Name: Corridor_Position
   m_EditorClassIdentifier: Assembly-CSharp::SSO_PlayerMovements
-  rightCorridor: {x: 4, y: 1.5}
-  leftCorridor: {x: -4, y: 1.5}
-  middleCorridor: {x: 0, y: 1.5}
+  rightCorridor: {x: 4, y: 0}
+  leftCorridor: {x: -4, y: 0}
+  middleCorridor: {x: 0, y: 0}
   switchBetweenLaneSpeed: 0.3
-  jumpHeight: 0
+  jumpForce: 10
   jumpSpeed: 0.3
-  jumpDuration: 2
+  jumpDuration: 0.8

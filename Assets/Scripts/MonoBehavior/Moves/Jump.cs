@@ -8,7 +8,10 @@ public class Jump : MonoBehaviour
     [SerializeField] private RSO_PlayerRuntime m_JumpAction;
     [SerializeField] private SSO_PlayerMovements m_JumpValue;
     [SerializeField] private InputActionReference m_jumpInput;
+<<<<<<< Updated upstream
     [SerializeField] private GameObject m_Player;
+=======
+>>>>>>> Stashed changes
 
     private void Start()
     {
@@ -45,6 +48,11 @@ public class Jump : MonoBehaviour
 
     private void StartJump(InputAction.CallbackContext jump)
     {
-        m_JumpAction.isGrounded = false;
+        if (m_JumpAction.grounded == 0)
+        {
+            Debug.Log("slide input");
+            m_JumpAction.isGrounded = false;
+        }
+        if (m_JumpAction.grounded < 0) { return; }
     }
 }

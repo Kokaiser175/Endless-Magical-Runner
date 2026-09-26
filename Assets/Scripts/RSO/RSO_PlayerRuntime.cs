@@ -6,5 +6,6 @@ public class RSO_PlayerRuntime : ScriptableObject
     public bool isGrounded;
     public float jumpVelocityForce;
     public float grounded;
+    public bool isUnderGround;
 
 }
