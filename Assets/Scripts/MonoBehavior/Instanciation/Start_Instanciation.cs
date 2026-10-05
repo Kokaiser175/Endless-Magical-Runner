@@ -9,5 +9,9 @@ public class Start_Instanciation : MonoBehaviour
     {
         Instantiate(m_Player);
         Instantiate(m_DungeonChunk, new Vector3(0f, -0.5f, 0f), Quaternion.identity);
+        Instantiate(m_DungeonChunk, new Vector3(0f, -0.5f, 100f), Quaternion.identity);
+        Instantiate(m_DungeonChunk, new Vector3(0f, -0.5f, 200f), Quaternion.identity);
+        Instantiate(m_DungeonChunk, new Vector3(0f, -0.5f, 300f), Quaternion.identity);
+
     }
 }

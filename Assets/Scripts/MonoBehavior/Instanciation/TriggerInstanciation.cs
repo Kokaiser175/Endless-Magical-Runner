@@ -9,7 +9,7 @@ public class TriggerInstanciation : MonoBehaviour
     {
         if(other.gameObject.CompareTag("SpawnTrigger"))
         {
-            Instantiate(NextChunk, new Vector3(0, -0.5f, 82.8f), Quaternion.identity);
+            Instantiate(NextChunk, new Vector3(0, -0.5f, 382.75f), Quaternion.identity);
         }
     }
 }

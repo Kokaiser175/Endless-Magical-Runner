@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &84473993
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +201,8 @@ MonoBehaviour:
   m_SlideAction: {fileID: 11400000, guid: 832541aeb7357da43b1cc9ee51dfa008, type: 2}
   m_SlideValue: {fileID: 11400000, guid: c3c80d747c8618b45a573e3a39c18c83, type: 2}
   m_SlideInput: {fileID: 3053711318093625519, guid: 1ea7344910982854ab442e186d391e53, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +525,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd62feeeefbeb7043bb911f0025463a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChunkMovement
+<<<<<<< Updated upstream
   m_DungeonChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+=======
+  m_DungeonChunk: {fileID: 0}
+>>>>>>> Stashed changes
   m_AccelerationValue: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
 --- !u!1 &665193667
 GameObject:
@@ -533,10 +540,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 665193670}
+  - component: {fileID: 665193671}
+  - component: {fileID: 665193672}
   - component: {fileID: 665193669}
+<<<<<<< Updated upstream
   - component: {fileID: 665193672}
   - component: {fileID: 665193674}
   - component: {fileID: 665193671}
+=======
+>>>>>>> Stashed changes
   - component: {fileID: 665193673}
   m_Layer: 0
   m_Name: ChunkManager
@@ -564,7 +576,11 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
+<<<<<<< Updated upstream
   m_Size: {x: 20, y: 20, z: 10}
+=======
+  m_Size: {x: 20, y: 20, z: 20}
+>>>>>>> Stashed changes
   m_Center: {x: 0, y: 0, z: -150}
 --- !u!4 &665193670
 Transform:
@@ -604,11 +620,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 665193667}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: ab2cd8fe3b4b156478f1c19e097bc915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerInstanciation
   SpawnTrigger: {fileID: 665193667}
   NextChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: a47783ce99bbab444b8e439e4063e5e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destroy_Chunk
+>>>>>>> Stashed changes
 --- !u!54 &665193673
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -617,9 +639,15 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665193667}
   serializedVersion: 5
+<<<<<<< Updated upstream
   m_Mass: 0.0000001
   m_LinearDamping: 0
   m_AngularDamping: 0
+=======
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+>>>>>>> Stashed changes
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -634,6 +662,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
+<<<<<<< Updated upstream
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &665193674
@@ -648,12 +677,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47783ce99bbab444b8e439e4063e5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Destroy_Chunk
+=======
+  m_Constraints: 126
+  m_CollisionDetection: 0
+>>>>>>> Stashed changes
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 330585546}
   - {fileID: 410087041}
-  - {fileID: 84473995}
   - {fileID: 479509065}
   - {fileID: 665193670}
