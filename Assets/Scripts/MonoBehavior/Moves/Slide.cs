@@ -33,7 +33,7 @@ public class Slide : MonoBehaviour
 
                 }
                 else { return; }
-
+                
             }
         }
         private void StartSlide(InputAction.CallbackContext jump)

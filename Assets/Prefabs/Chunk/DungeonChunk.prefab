@@ -63,7 +63,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3623075537201021793}
   - component: {fileID: -6052974226987298179}
-  - component: {fileID: 2248893684900284162}
   m_Layer: 0
   m_Name: DungeonChunk
   m_TagString: Chunk
@@ -80,7 +79,7 @@ Transform:
   m_GameObject: {fileID: 3112315593383014395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -195.22437}
+  m_LocalPosition: {x: 0, y: 0, z: -652.195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -105,33 +104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChunkMovement
   m_DungeonChunk: {fileID: 3112315593383014395}
   m_AccelerationValue: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
---- !u!54 &2248893684900284162
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3112315593383014395}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1005817859488811928
 PrefabInstance:
   m_ObjectHideFlags: 0
