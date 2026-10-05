@@ -1123,6 +1123,7 @@ GameObject:
   - component: {fileID: 7746684975364113696}
   - component: {fileID: 1273117770657656054}
   - component: {fileID: 2988826176805186959}
+  - component: {fileID: 2164445581853589599}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1219,6 +1220,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2164445581853589599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870821530416853634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2cd8fe3b4b156478f1c19e097bc915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerInstanciation
+  SpawnTrigger: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+  NextChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
 --- !u!1 &3999899781832443483
 GameObject:
   m_ObjectHideFlags: 0
