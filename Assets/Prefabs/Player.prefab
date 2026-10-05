@@ -1123,7 +1123,9 @@ GameObject:
   - component: {fileID: 7746684975364113696}
   - component: {fileID: 1273117770657656054}
   - component: {fileID: 2988826176805186959}
-  - component: {fileID: 2164445581853589599}
+  - component: {fileID: 7134653740247304104}
+  - component: {fileID: 5940631959543172181}
+  - component: {fileID: 8660120696074934844}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1220,7 +1222,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2164445581853589599
+--- !u!114 &7134653740247304104
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1229,11 +1231,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 3870821530416853634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab2cd8fe3b4b156478f1c19e097bc915, type: 3}
+  m_Script: {fileID: 11500000, guid: 7782d6914588df640bafcd8e32236d5a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TriggerInstanciation
-  SpawnTrigger: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
-  NextChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::Jump
+  m_JumpAction: {fileID: 11400000, guid: 832541aeb7357da43b1cc9ee51dfa008, type: 2}
+  m_JumpValue: {fileID: 11400000, guid: c3c80d747c8618b45a573e3a39c18c83, type: 2}
+  m_jumpInput: {fileID: -4182025700971807714, guid: 1ea7344910982854ab442e186d391e53, type: 3}
+  m_Player: {fileID: 3870821530416853634}
+--- !u!114 &5940631959543172181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870821530416853634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3efe2569acc7fc4429aa0950314b4e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  corridor_Position: {fileID: 11400000, guid: c3c80d747c8618b45a573e3a39c18c83, type: 2}
+  player_Runtime: {fileID: 11400000, guid: 832541aeb7357da43b1cc9ee51dfa008, type: 2}
+  m_player: {fileID: 3870821530416853634}
+  switchCorridor: {fileID: 1130247464205992699, guid: 1ea7344910982854ab442e186d391e53, type: 3}
+--- !u!114 &8660120696074934844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870821530416853634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab629fb004a50142b5772bb7c13fadf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slide
+  m_SlideAction: {fileID: 11400000, guid: 832541aeb7357da43b1cc9ee51dfa008, type: 2}
+  m_SlideValue: {fileID: 11400000, guid: c3c80d747c8618b45a573e3a39c18c83, type: 2}
+  m_SlideInput: {fileID: 3053711318093625519, guid: 1ea7344910982854ab442e186d391e53, type: 3}
 --- !u!1 &3999899781832443483
 GameObject:
   m_ObjectHideFlags: 0

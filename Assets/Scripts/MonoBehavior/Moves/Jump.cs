@@ -11,7 +11,6 @@ public class Jump : MonoBehaviour
     [SerializeField] private GameObject m_Player;
     private void Start()
     {
-        m_JumpAction.grounded = 1.5f;
         m_JumpAction.isGrounded = true;
     }
     private void OnEnable()
