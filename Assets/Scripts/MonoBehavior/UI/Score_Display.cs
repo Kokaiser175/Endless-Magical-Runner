@@ -1,3 +1,5 @@
+using LitMotion;
+using LitMotion.Extensions;
 using TMPro;
 using UnityEngine;
 
@@ -8,17 +10,14 @@ public class Score_Display : MonoBehaviour
 
     private void OnEnable() // Abonnement / Désabonnement pour la mise à jour du score.
     {
-        Debug.Log("Enable Score ok");
         m_Score.OnChanged += OnScoreChanged;
     }
     private void OnDisable()
     {
-        Debug.Log("Disable Score ok");
         m_Score.OnChanged -= OnScoreChanged;
     }
     private void OnScoreChanged(int value)
     {
         m_Scoretxt.text = value.ToString(); // Charge l'affichage au moment du changement de valeur.
-        Debug.Log("ScoreChanged");
     }
 }
