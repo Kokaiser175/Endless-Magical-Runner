@@ -7,7 +7,7 @@ public class Mana_Manager : MonoBehaviour
  
     void Start()
     {
-        m_mana.value = 0;
+        m_mana.Value = 0;
         StartCoroutine("ManaRegen");
     }
 
@@ -15,14 +15,13 @@ public class Mana_Manager : MonoBehaviour
     {
         while (true)
         {
-            if (m_mana.value <= 100)
+            if (m_mana.Value <= 100)
             {
                 yield return new WaitForSeconds(1);
-                m_mana.value += 2;
-                Debug.Log($"{m_mana.value.ToString()}");
-
+                m_mana.Value += 2;
+                Debug.Log($"{m_mana.Value.ToString()}");
             }
-            if( m_mana.value > 98)
+            if( m_mana.Value > 98)
             {  break;}
         }      
     }

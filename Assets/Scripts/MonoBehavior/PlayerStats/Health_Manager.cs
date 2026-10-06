@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class Health_Manager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] RSO_Health m_Health;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        m_Health.Value = 3;
+        if (m_Health.Value >= 3)
+        {
+            m_Health.Value = 3;
+        }
     }
 }
+
+
