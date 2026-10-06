@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6013b4d1786ed4b8a0eb081cb9ecbe, type: 3}
   m_Name: SpeedAcceleration
   m_EditorClassIdentifier: Assembly-CSharp::RSO_AccelerationValue
-  value: 0
+  value: 10.25
