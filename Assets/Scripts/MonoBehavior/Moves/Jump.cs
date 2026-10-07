@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Jump : MonoBehaviour
 {   
-    [SerializeField] private RSO_PlayerRuntime m_JumpAction;
+    [SerializeField] private RSO_MovementValue m_JumpAction;
     [SerializeField] private SSO_PlayerMovements m_JumpValue;
     [SerializeField] private InputActionReference m_jumpInput;
     [SerializeField] private GameObject m_Player;
@@ -28,7 +28,6 @@ public class Jump : MonoBehaviour
     {
         if (m_JumpAction.isGrounded == false)
         {
-            Debug.Log("jump");
             m_Player.transform.position += new Vector3(m_Player.transform.position.x, m_JumpAction.grounded, m_Player.transform.position.z) * Time.deltaTime;
 
             if(m_Player.transform.position == new Vector3(m_Player.transform.position.x, 1.5f, m_Player.transform.position.z))
@@ -41,11 +40,6 @@ public class Jump : MonoBehaviour
 
     private void StartJump(InputAction.CallbackContext jump)
     {
-        if (m_JumpAction.grounded == 0)
-        {
-            Debug.Log("slide input");
-            m_JumpAction.isGrounded = false;
-        }
-        if (m_JumpAction.grounded < 0) { return; }
+        m_JumpAction.isGrounded = false;
     }
 }

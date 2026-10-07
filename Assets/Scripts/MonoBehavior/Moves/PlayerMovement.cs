@@ -10,7 +10,7 @@ using UnityEngine.Windows;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private SSO_PlayerMovements corridor_Position;
-    [SerializeField] private RSO_PlayerRuntime player_Runtime;
+    [SerializeField] private RSO_MovementValue movement_Value;
     [SerializeField] private GameObject m_player;
     [SerializeField] private InputActionReference switchCorridor;
 
@@ -20,9 +20,9 @@ public class PlayerMovement : MonoBehaviour
     
     void Start()
     {
-        corridor_Position.rightCorridor = new Vector2(4, player_Runtime.grounded); // Initialisation des vecteurs des couloirs, la valeur de hauteur est gérée dans le RSO_PlayerRuntime car peut changer.
-        corridor_Position.leftCorridor = new Vector2(-4, player_Runtime.grounded);
-        corridor_Position.middleCorridor = new Vector2(0, player_Runtime.grounded);
+        corridor_Position.rightCorridor = new Vector2(4, movement_Value.grounded); // Initialisation des vecteurs des couloirs, la valeur de hauteur est gérée dans le RSO_PlayerRuntime car peut changer.
+        corridor_Position.leftCorridor = new Vector2(-4, movement_Value.grounded);
+        corridor_Position.middleCorridor = new Vector2(0, movement_Value.grounded);
 
         m_player.transform.position = corridor_Position.middleCorridor; // position de départ
     }

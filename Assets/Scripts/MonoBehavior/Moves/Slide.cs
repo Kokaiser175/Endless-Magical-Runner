@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Slide : MonoBehaviour
 {
-        [SerializeField] private RSO_PlayerRuntime m_SlideAction;
+        [SerializeField] private RSO_MovementValue m_SlideAction;
         [SerializeField] private SSO_PlayerMovements m_SlideValue;
         [SerializeField] private InputActionReference m_SlideInput;
 
