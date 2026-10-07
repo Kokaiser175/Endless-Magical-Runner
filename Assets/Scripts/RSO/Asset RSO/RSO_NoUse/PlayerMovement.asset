@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerMovement
   m_EditorClassIdentifier: Assembly-CSharp::RSO_PlayerRuntime
   isGrounded: 0
-  jumpVelocityForce: 0
-  grounded: 0
-  isUnderGround: 0
+  jumpForce: 10
+  jumpHightTarget: 1.5
+  grounded: 0.52195495
