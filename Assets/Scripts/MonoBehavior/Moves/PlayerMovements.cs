@@ -17,10 +17,10 @@ public class PlayerMovements : MonoBehaviour
     private Vector3 targetLane;
     private Vector3 targetJump;
     private int currentCorridor; // -1 = left; 0 = middle ; 1 = right.
-    public float grounded = 0f;
-    public float jumpDuration = 0.8f;
-    public float jumpSpeed = 10f;
-    public float switchingLaneSpeed = 5f;
+    public float grounded;
+    public float jumpDuration;
+    public float jumpSpeed;
+    public float switchingLaneSpeed;
     private bool isJumping;
 
     private void Start()
@@ -35,7 +35,6 @@ public class PlayerMovements : MonoBehaviour
         switchLane.action.performed += SwitchingLane;
         jump.action.Enable();
         jump.action.performed += Jumping;
-
     }
     private void OnDisable()
     {
@@ -92,18 +91,22 @@ public class PlayerMovements : MonoBehaviour
     }
     private void Jumping(InputAction.CallbackContext context)
     {
+        
         if (isJumping == true) { return; }
-        isJumping = true;
-        Debug.Log("jumpInput");
-        targetJump.y = heightAnchor.transform.position.y;
-        StartCoroutine(EndJump());
+        if (m_Player.transform.position.y <= 0.5f)
+        {
+            isJumping = true;
+            Debug.Log("jumpInput");
+            targetJump.y = heightAnchor.transform.position.y;
+            StartCoroutine(EndJump());
+        }
+        else return;
+           
     }
     private IEnumerator EndJump()
     {
         yield return new WaitForSeconds(jumpDuration);
-        isJumping=false;
-        
-    }
-  
+        isJumping = false;
 
+    }
 }
