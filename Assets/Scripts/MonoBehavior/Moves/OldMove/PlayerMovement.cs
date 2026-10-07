@@ -20,9 +20,9 @@ public class PlayerMovement : MonoBehaviour
     
     void Start()
     {
-        corridor_Position.rightCorridor = new Vector2(4, movement_Value.grounded); // Initialisation des vecteurs des couloirs, la valeur de hauteur est gérée dans le RSO_PlayerRuntime car peut changer.
-        corridor_Position.leftCorridor = new Vector2(-4, movement_Value.grounded);
-        corridor_Position.middleCorridor = new Vector2(0, movement_Value.grounded);
+        corridor_Position.rightCorridor = new Vector3(4, movement_Value.grounded,0); // Initialisation des vecteurs des couloirs, la valeur de hauteur est gérée dans le RSO_PlayerRuntime car peut changer.
+        corridor_Position.leftCorridor = new Vector3(-4, movement_Value.grounded,0);
+        corridor_Position.middleCorridor = new Vector3(0, movement_Value.grounded,0);
 
         m_player.transform.position = corridor_Position.middleCorridor; // position de départ
     }
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        m_player.transform.position = Vector3.MoveTowards(m_player.transform.position, targetCorridor, corridor_Position.switchBetweenLaneSpeed); // transition fluide entre les couloirs appelé par l'input choisit
+        m_player.transform.position = Vector3.MoveTowards(m_player.transform.position, targetCorridor, 50 * corridor_Position.switchBetweenLaneSpeed * Time.deltaTime); // transition fluide entre les couloirs appelé par l'input choisit
     }
 
     public void SwitchLane(InputAction.CallbackContext context)

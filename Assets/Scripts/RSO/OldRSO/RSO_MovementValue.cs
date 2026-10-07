@@ -4,8 +4,9 @@ using UnityEngine;
 public class RSO_MovementValue : ScriptableObject
 {
     public bool isGrounded;
-    public float jumpVelocityForce;
+    public float jumpForce;
+    public float jumpHightTarget;
     public float grounded;
-    public bool isUnderGround;
+    
 
 }

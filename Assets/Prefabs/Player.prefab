@@ -2392,9 +2392,6 @@ GameObject:
   - component: {fileID: 95805638432926132}
   - component: {fileID: 136275810615880682}
   - component: {fileID: -5811875142244079340}
-  - component: {fileID: 5356018845150371136}
-  - component: {fileID: 7799146314680473406}
-  - component: {fileID: 6105005330862502290}
   - component: {fileID: 2662600293636847994}
   m_Layer: 0
   m_Name: Player
@@ -2492,53 +2489,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5356018845150371136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953271650171834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7782d6914588df640bafcd8e32236d5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Jump
-  m_JumpAction: {fileID: 11400000, guid: 832541aeb7357da43b1cc9ee51dfa008, type: 2}
-  m_JumpValue: {fileID: 11400000, guid: c3c80d747c8618b45a573e3a39c18c83, type: 2}
-  m_jumpInput: {fileID: -4182025700971807714, guid: 1ea7344910982854ab442e186d391e53, type: 3}
-  m_Player: {fileID: 1953271650171834}
---- !u!114 &7799146314680473406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953271650171834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eab629fb004a50142b5772bb7c13fadf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Slide
-  m_SlideAction: {fileID: 11400000, guid: 832541aeb7357da43b1cc9ee51dfa008, type: 2}
-  m_SlideValue: {fileID: 11400000, guid: c3c80d747c8618b45a573e3a39c18c83, type: 2}
-  m_SlideInput: {fileID: 3053711318093625519, guid: 1ea7344910982854ab442e186d391e53, type: 3}
---- !u!114 &6105005330862502290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953271650171834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3efe2569acc7fc4429aa0950314b4e3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  corridor_Position: {fileID: 11400000, guid: c3c80d747c8618b45a573e3a39c18c83, type: 2}
-  player_Runtime: {fileID: 11400000, guid: 832541aeb7357da43b1cc9ee51dfa008, type: 2}
-  m_player: {fileID: 1953271650171834}
-  switchCorridor: {fileID: 1130247464205992699, guid: 1ea7344910982854ab442e186d391e53, type: 3}
 --- !u!114 &2662600293636847994
 MonoBehaviour:
   m_ObjectHideFlags: 0
