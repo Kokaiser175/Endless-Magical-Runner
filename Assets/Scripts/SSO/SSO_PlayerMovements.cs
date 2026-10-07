@@ -7,9 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Corridor_Position", menuName = "Corridor_Position")]
 public class SSO_PlayerMovements : ScriptableObject
 {
-    public Vector2 rightCorridor;
-    public Vector2 leftCorridor;
-    public Vector2 middleCorridor;
-    public float switchBetweenLaneSpeed = 30f;
+    public Vector3 rightCorridor;
+    public Vector3 leftCorridor;
+    public Vector3 middleCorridor;
 }
 
