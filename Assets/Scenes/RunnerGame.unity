@@ -856,6 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   m_AccelerationValue: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
+  add_Speed: 0
 --- !u!4 &479509065
 Transform:
   m_ObjectHideFlags: 0
@@ -883,7 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd62feeeefbeb7043bb911f0025463a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChunkMovement
-  m_DungeonChunk: {fileID: 1953271650171834, guid: dbf7a0c9d76b77a40af3104feac0641d, type: 3}
+  m_DungeonChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
   m_AccelerationValue: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
 --- !u!1 &514064338
 GameObject:
@@ -1106,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b35a72aa91fbc449e6723fe7a5baa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Start_Instanciation
-  m_Player: {fileID: 1953271650171834, guid: dbf7a0c9d76b77a40af3104feac0641d, type: 3}
+  m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
   m_DungeonChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
 --- !u!114 &665193672
 MonoBehaviour:
