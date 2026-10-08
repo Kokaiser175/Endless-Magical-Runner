@@ -9,21 +9,21 @@ public class WorldSpeedAcceleration : MonoBehaviour
     public float add_Speed;
     void Start()
     {
-        add_Speed = 0.25f;
         m_AccelerationValue.value = 3f;
         StartCoroutine(AccelarationCoroutine());
-        if (m_AccelerationValue.value >= 16f)
-        {
-            m_AccelerationValue.value = 16f;
-        }
+        
     }
 
     private IEnumerator AccelarationCoroutine()
     {
         while (true)
         {
-            yield return new WaitForSeconds(20);
+            yield return new WaitForSeconds(1);
             m_AccelerationValue.value = m_AccelerationValue.value + add_Speed;
+            if (m_AccelerationValue.value >= 15.8f)
+            {
+                break;
+            }
         }
     }
 }
