@@ -1518,7 +1518,8 @@ MonoBehaviour:
   slide: {fileID: 3053711318093625519, guid: 1ea7344910982854ab442e186d391e53, type: 3}
   playerCurrentPosition: {x: 0, y: 0, z: 0}
   grounded: 0
-  jumpDuration: 0.8
+  jumpDuration: 0.3
+  slideDuration: 0.8
   jumpSpeed: 10
   switchingLaneSpeed: 5
 --- !u!1 &1477106566
