@@ -2393,7 +2393,7 @@ GameObject:
   - component: {fileID: 136275810615880682}
   - component: {fileID: -5811875142244079340}
   - component: {fileID: 2662600293636847994}
-  - component: {fileID: 4679207694354194213}
+  - component: {fileID: -8200660131212489324}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2411,7 +2411,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4725913906824530}
@@ -2504,7 +2504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TriggerInstanciation
   SpawnTrigger: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
   NextChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
---- !u!114 &4679207694354194213
+--- !u!114 &-8200660131212489324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2526,9 +2526,9 @@ MonoBehaviour:
   slide: {fileID: 3053711318093625519, guid: 1ea7344910982854ab442e186d391e53, type: 3}
   playerCurrentPosition: {x: 0, y: 0, z: 0}
   grounded: 0
-  jumpDuration: 0.3
+  jumpDuration: 0.8
   slideDuration: 0.8
-  jumpSpeed: 10
+  jumpSpeed: 5
   switchingLaneSpeed: 5
 --- !u!1 &1956949540428108
 GameObject:
