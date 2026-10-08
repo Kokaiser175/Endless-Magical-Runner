@@ -2393,6 +2393,7 @@ GameObject:
   - component: {fileID: 136275810615880682}
   - component: {fileID: -5811875142244079340}
   - component: {fileID: 2662600293636847994}
+  - component: {fileID: 4679207694354194213}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2409,8 +2410,8 @@ Transform:
   m_GameObject: {fileID: 1953271650171834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2809.8547}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.9999955, y: 0.000000012145938, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4725913906824530}
@@ -2503,6 +2504,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TriggerInstanciation
   SpawnTrigger: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
   NextChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+--- !u!114 &4679207694354194213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953271650171834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1194f65a4a0f52478a408fc9f9efba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovements
+  leftAnchor: {fileID: 1260987390710161382, guid: 6af7de874134e8444abc538f83bedc37, type: 3}
+  middleAnchor: {fileID: 8346202594663599643, guid: e695385d8a16752489f07a0fb266f9ec, type: 3}
+  rightAnchor: {fileID: 6019438717038884419, guid: cb70b9c423939cf4e956edf9f0c935bc, type: 3}
+  heightAnchor: {fileID: 1201171091325015818, guid: 1e9b6c2aed3889c48801ca5e23d29533, type: 3}
+  m_Player: {fileID: 1953271650171834}
+  switchLane: {fileID: 1130247464205992699, guid: 1ea7344910982854ab442e186d391e53, type: 3}
+  jump: {fileID: -4182025700971807714, guid: 1ea7344910982854ab442e186d391e53, type: 3}
+  slide: {fileID: 3053711318093625519, guid: 1ea7344910982854ab442e186d391e53, type: 3}
+  playerCurrentPosition: {x: 0, y: 0, z: 0}
+  grounded: 0
+  jumpDuration: 0.3
+  slideDuration: 0.8
+  jumpSpeed: 10
+  switchingLaneSpeed: 5
 --- !u!1 &1956949540428108
 GameObject:
   m_ObjectHideFlags: 0

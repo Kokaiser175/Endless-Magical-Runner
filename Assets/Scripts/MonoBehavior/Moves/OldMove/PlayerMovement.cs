@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        m_player.transform.position = Vector3.MoveTowards(m_player.transform.position, targetCorridor, 50 * corridor_Position.switchBetweenLaneSpeed * Time.deltaTime); // transition fluide entre les couloirs appelé par l'input choisit
+        m_player.transform.position = Vector3.MoveTowards(m_player.transform.position, targetCorridor, 50 * Time.deltaTime); // transition fluide entre les couloirs appelé par l'input choisit
     }
 
     public void SwitchLane(InputAction.CallbackContext context)
