@@ -19,14 +19,17 @@ public class PlayerMovements : MonoBehaviour
     private int currentCorridor; // -1 = left; 0 = middle ; 1 = right.
     public float grounded;
     public float jumpDuration;
+    public float slideDuration;
     public float jumpSpeed;
     public float switchingLaneSpeed;
     private bool isJumping;
+    private bool isSliding;
 
     private void Start()
     {
         m_Player.transform.position = middleAnchor.transform.position;
         isJumping = false;
+        isSliding = false;
     }
 
     private void OnEnable()
@@ -35,6 +38,8 @@ public class PlayerMovements : MonoBehaviour
         switchLane.action.performed += SwitchingLane;
         jump.action.Enable();
         jump.action.performed += Jumping;
+        slide.action.Enable();
+        slide.action.performed += Sliding;
     }
     private void OnDisable()
     {
@@ -43,6 +48,8 @@ public class PlayerMovements : MonoBehaviour
         switchLane.action.Disable();
         jump.action.performed -= Jumping;
         jump.action.Disable();
+        slide.action.performed -= Sliding;
+        slide.action.Disable();
     }
     private void Update()
     {
@@ -107,6 +114,20 @@ public class PlayerMovements : MonoBehaviour
     {
         yield return new WaitForSeconds(jumpDuration);
         isJumping = false;
-
+    }
+    private void Sliding(InputAction.CallbackContext context)
+    {
+        if (isSliding == true) { return; }
+            isSliding = true;
+            Debug.Log("Slide Input");
+       StartCoroutine(EndSlide());
+       
+    }
+    private IEnumerator EndSlide()
+    {
+        m_Player.transform.rotation = new Quaternion(-90f, 0, 0, 90);
+        yield return new WaitForSeconds(slideDuration);
+        m_Player.transform.rotation = Quaternion.identity;
+        isSliding = false;
     }
 }
