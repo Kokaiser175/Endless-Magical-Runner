@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 119763146}
   - component: {fileID: 119763147}
   - component: {fileID: 119763148}
+  - component: {fileID: 119763149}
   m_Layer: 0
   m_Name: PlayerStatManager
   m_TagString: Untagged
@@ -269,6 +270,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Score_Manager
   m_Value: {fileID: 11400000, guid: c69447640ea90a648add473b851d507a, type: 2}
   speed: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
+--- !u!114 &119763149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119763144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8b270205c6744aa54cdcfafc46f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacles
+  hit: {fileID: 11400000, guid: 6e0dc87022551194da36efab5ea820c2, type: 2}
+  player_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+  m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
+  invulnerabilityFrame: 0
 --- !u!1 &178901968
 GameObject:
   m_ObjectHideFlags: 0

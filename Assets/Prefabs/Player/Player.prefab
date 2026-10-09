@@ -2395,6 +2395,7 @@ GameObject:
   - component: {fileID: 2662600293636847994}
   - component: {fileID: -8200660131212489324}
   - component: {fileID: 1067805452908161589}
+  - component: {fileID: 1568467660462194732}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2487,9 +2488,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &2662600293636847994
 MonoBehaviour:
@@ -2551,6 +2552,22 @@ MonoBehaviour:
   FireEffectMaterial: {fileID: 2100000, guid: 7760b57fed9516d429fe4541c1336c93, type: 2}
   WizardMaterial: {fileID: 2100000, guid: 84ca4aaa7bafeee42b0818a2fce874ef, type: 2}
   m_Player: {fileID: 1953271650171834}
+--- !u!114 &1568467660462194732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953271650171834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8b270205c6744aa54cdcfafc46f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacles
+  hit: {fileID: 11400000, guid: 6e0dc87022551194da36efab5ea820c2, type: 2}
+  player_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+  m_Player: {fileID: 1953271650171834}
+  invulnerabilityFrame: 2
 --- !u!1 &1956949540428108
 GameObject:
   m_ObjectHideFlags: 0
