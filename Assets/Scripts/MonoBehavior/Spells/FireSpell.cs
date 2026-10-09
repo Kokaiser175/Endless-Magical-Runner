@@ -31,7 +31,7 @@ public class FireSpell : MonoBehaviour
     }
 
     public void CastFireSpell(InputAction.CallbackContext context)
-    {
+    {   if (fire.spellIsActive == true) { return; }
         if (manaCost.Value < fire.spellManaCost) { return; }
         if (manaCost.Value >= fire.spellManaCost)
         {

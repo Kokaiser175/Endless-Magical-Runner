@@ -9,7 +9,6 @@ public class TriggerInstanciation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Random.InitState(Random.Range(0,100));
         value = Random.Range(0, 100);
 
         if (other.gameObject.CompareTag("SpawnTrigger"))

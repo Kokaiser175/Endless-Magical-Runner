@@ -653,57 +653,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health_Display
   m_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
   m_Healthtxt: {fileID: 2091574152}
---- !u!1 &331279970
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 331279971}
-  - component: {fileID: 331279972}
-  m_Layer: 0
-  m_Name: SpellManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &331279971
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331279970}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1912541496}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &331279972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331279970}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90687237754a623438d62240d5f8d49d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  fire: {fileID: 11400000, guid: 3a5b3b02a22d30645a30fbf9a2fef761, type: 2}
-  castSpell: {fileID: -5032503641765294997, guid: 1ea7344910982854ab442e186d391e53, type: 3}
-  speedAcceleration: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
-  manaCost: {fileID: 11400000, guid: 5d7b4369a8f87ca4e8eaea61342ea653, type: 2}
-  FireEffectMaterial: {fileID: 2100000, guid: 7760b57fed9516d429fe4541c1336c93, type: 2}
-  WizardMaterial: {fileID: 2100000, guid: 84ca4aaa7bafeee42b0818a2fce874ef, type: 2}
-  m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +1758,6 @@ Transform:
   - {fileID: 119763145}
   - {fileID: 289813459}
   - {fileID: 1476105156}
-  - {fileID: 331279971}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091574150

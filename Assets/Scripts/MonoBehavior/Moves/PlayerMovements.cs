@@ -98,7 +98,7 @@ public class PlayerMovements : MonoBehaviour
     }
     private void Jumping(InputAction.CallbackContext context)
     {
-        
+        if (isSliding == true) { return; }
         if (isJumping == true) { return; }
         if (m_Player.transform.position.y <= 0.5f)
         {
@@ -117,6 +117,7 @@ public class PlayerMovements : MonoBehaviour
     }
     private void Sliding(InputAction.CallbackContext context)
     {
+        if (isJumping == true) { return; }
         if (isSliding == true) { return; }
             isSliding = true;
             Debug.Log("Slide Input");

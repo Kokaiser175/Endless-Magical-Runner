@@ -5,7 +5,7 @@ using UnityEngine;
 public class RSO_Mana : ScriptableObject
 {
     public event Action<int> OnManaChanged;
-    private int m_value;
+    public int m_value;
     public int Value
     {
         get { return m_value; }

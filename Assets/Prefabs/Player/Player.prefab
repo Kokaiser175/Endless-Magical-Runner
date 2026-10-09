@@ -2394,7 +2394,7 @@ GameObject:
   - component: {fileID: -5811875142244079340}
   - component: {fileID: 2662600293636847994}
   - component: {fileID: -8200660131212489324}
-  - component: {fileID: -5648942311812449096}
+  - component: {fileID: 1067805452908161589}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2411,7 +2411,7 @@ Transform:
   m_GameObject: {fileID: 1953271650171834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2238396e-10, y: 0.028996935, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2532,7 +2532,7 @@ MonoBehaviour:
   slideDuration: 0.8
   jumpSpeed: 5
   switchingLaneSpeed: 5
---- !u!114 &-5648942311812449096
+--- !u!114 &1067805452908161589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
