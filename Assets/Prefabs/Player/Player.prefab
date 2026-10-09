@@ -1202,7 +1202,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa2697fc5c62ddc469c79075db26cab4, type: 2}
+  - {fileID: 2100000, guid: 84ca4aaa7bafeee42b0818a2fce874ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2394,6 +2394,7 @@ GameObject:
   - component: {fileID: -5811875142244079340}
   - component: {fileID: 2662600293636847994}
   - component: {fileID: -8200660131212489324}
+  - component: {fileID: -5648942311812449096}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2410,7 +2411,7 @@ Transform:
   m_GameObject: {fileID: 1953271650171834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0000009502351, y: 1.0839583e-14, z: 0}
+  m_LocalPosition: {x: -1.2238396e-10, y: 0.028996935, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2531,6 +2532,25 @@ MonoBehaviour:
   slideDuration: 0.8
   jumpSpeed: 5
   switchingLaneSpeed: 5
+--- !u!114 &-5648942311812449096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953271650171834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90687237754a623438d62240d5f8d49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  fire: {fileID: 11400000, guid: 3a5b3b02a22d30645a30fbf9a2fef761, type: 2}
+  castSpell: {fileID: -5032503641765294997, guid: 1ea7344910982854ab442e186d391e53, type: 3}
+  speedAcceleration: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
+  manaCost: {fileID: 11400000, guid: 5d7b4369a8f87ca4e8eaea61342ea653, type: 2}
+  FireEffectMaterial: {fileID: 2100000, guid: 7760b57fed9516d429fe4541c1336c93, type: 2}
+  WizardMaterial: {fileID: 2100000, guid: 84ca4aaa7bafeee42b0818a2fce874ef, type: 2}
+  m_Player: {fileID: 1953271650171834}
 --- !u!1 &1956949540428108
 GameObject:
   m_ObjectHideFlags: 0
