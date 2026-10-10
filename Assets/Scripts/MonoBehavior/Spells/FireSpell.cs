@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -7,6 +8,7 @@ using UnityEngine.Rendering;
 public class FireSpell : MonoBehaviour
 {
     [SerializeField] RSO_SpellValue fire;
+    [SerializeField] RSO_ObstacleValues hit;
     [SerializeField] InputActionReference castSpell;
     [SerializeField] RSO_AccelerationValue speedAcceleration;
     [SerializeField] RSO_Mana manaCost;
@@ -17,6 +19,7 @@ public class FireSpell : MonoBehaviour
     private void Start()
     {
         fire.spellIsActive = false;
+        fire.cooldownIsActive = false;
     }
 
     private void OnEnable()
@@ -31,7 +34,9 @@ public class FireSpell : MonoBehaviour
     }
 
     public void CastFireSpell(InputAction.CallbackContext context)
-    {   if (fire.spellIsActive == true) { return; }
+    {   
+        if (fire.cooldownIsActive == true) { return; }
+        if (fire.spellIsActive == true) { return; }
         if (manaCost.Value < fire.spellManaCost) { return; }
         if (manaCost.Value >= fire.spellManaCost)
         {
@@ -43,7 +48,6 @@ public class FireSpell : MonoBehaviour
                 StartCoroutine(FireSpellCoroutine());
             }
         }
-       
     }
     private IEnumerator FireSpellCoroutine()
     {
@@ -51,13 +55,46 @@ public class FireSpell : MonoBehaviour
         m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = WizardMaterial;
         speedAcceleration.value = speedAcceleration.value * 0.8f;
         fire.spellIsActive = false;
-
+        hit.hitValue = 1;
+        fire.spellEffectCount = 0;
+        StartCoroutine(FireSpellCoolDownCoroutine());
+    }
+    private IEnumerator FireSpellCoolDownCoroutine()
+    {
+        fire.cooldownIsActive = true;
+        yield return new WaitForSeconds(fire.spellCoolDowm);
+        fire.cooldownIsActive = false;
     }
     private void FireSpellEffect()
     {
         
         m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = FireEffectMaterial;
         speedAcceleration.value = speedAcceleration.value * 1.2f;
+        hit.hitValue = 0;
+        fire.spellEffectCount = 1;
+        
+    }
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (fire.spellIsActive == true)
+        {
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                Destroy(collision.gameObject);
+                fire.spellEffectCount--;
+                if (fire.spellEffectCount == 0)
+                {
+                    StopCoroutine(FireSpellCoroutine());
+                    m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = WizardMaterial;
+                    speedAcceleration.value = speedAcceleration.value * 0.8f;
+                    fire.spellIsActive = false;
+                    hit.hitValue = 1;
+                    fire.spellEffectCount = 0;
+                    StartCoroutine(FireSpellCoolDownCoroutine());
+
+                }
+            }
+        }
         
     }
 }

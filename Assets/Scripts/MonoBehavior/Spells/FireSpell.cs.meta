@@ -1,2 +1,18 @@
 fileFormatVersion: 2
 guid: 90687237754a623438d62240d5f8d49d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fire: {instanceID: 0}
+  - castSpell: {instanceID: 0}
+  - speedAcceleration: {instanceID: 0}
+  - manaCost: {instanceID: 0}
+  - FireEffectMaterial: {instanceID: 0}
+  - WizardMaterial: {instanceID: 0}
+  - m_Player: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

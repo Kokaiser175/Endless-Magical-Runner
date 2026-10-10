@@ -6,4 +6,6 @@ public class RSO_SpellValue : ScriptableObject
     public int spellManaCost;
     public float spellCoolDowm;
     public bool spellIsActive;
+    public bool cooldownIsActive;
+    public int spellEffectCount;
 }

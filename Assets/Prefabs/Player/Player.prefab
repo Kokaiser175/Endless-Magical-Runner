@@ -2412,7 +2412,7 @@ Transform:
   m_GameObject: {fileID: 1953271650171834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9999971, y: 0.0000021524338, z: 0}
+  m_LocalPosition: {x: 3.999996, y: 8.2981526e-32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2547,6 +2547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   fire: {fileID: 11400000, guid: 3a5b3b02a22d30645a30fbf9a2fef761, type: 2}
+  hit: {fileID: 11400000, guid: 6e0dc87022551194da36efab5ea820c2, type: 2}
   castSpell: {fileID: -5032503641765294997, guid: 1ea7344910982854ab442e186d391e53, type: 3}
   speedAcceleration: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
   manaCost: {fileID: 11400000, guid: 5d7b4369a8f87ca4e8eaea61342ea653, type: 2}
