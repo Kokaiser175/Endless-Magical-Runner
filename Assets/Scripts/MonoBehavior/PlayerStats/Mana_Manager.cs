@@ -18,11 +18,14 @@ public class Mana_Manager : MonoBehaviour
             if (m_mana.Value <= 100)
             {
                 yield return new WaitForSeconds(1);
-                m_mana.Value += 2;
-                Debug.Log($"{m_mana.Value.ToString()}");
+                m_mana.Value += 2; ;
             }
-            if( m_mana.Value > 98)
-            {  break;}
-        }      
+            if (m_mana.Value > 98)
+            { m_mana.Value += 0; }
+            if (m_mana.Value > 100)
+            {
+                m_mana.Value = 100;
+            }
+        }
     }
 }

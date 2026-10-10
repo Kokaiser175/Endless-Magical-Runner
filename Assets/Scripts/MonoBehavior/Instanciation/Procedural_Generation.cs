@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SSO_Spell : MonoBehaviour
+public class Procedural_Generation : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
