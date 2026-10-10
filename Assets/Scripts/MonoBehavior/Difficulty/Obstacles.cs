@@ -10,30 +10,39 @@ public class Obstacles : MonoBehaviour
     [SerializeField] RSO_Health player_Health;
     [SerializeField] GameObject m_Player;
     public float invulnerabilityFrame;
+    public bool hasBeenEat;
 
     private void Start()
     {
-
+        hasBeenEat = false;
     }
 
     public void OnCollisionEnter(Collision collision)
     {
+
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("hit");
-            player_Health.Value = player_Health.Value - hit.hitValue;
-            StartCoroutine(InvincibilityFrame());
+               if (hasBeenEat == false)
+                {
+                Debug.Log("hit");
+                StartCoroutine(InvincibilityFrame());
+                }
+            else { return; }
         }
         
     }
     private IEnumerator InvincibilityFrame()
     {
         Debug.Log("CoroutineStart");
-        m_Player.GetComponent<Rigidbody>().isKinematic = true;
+        GetHit();
+        hasBeenEat = true;
         yield return new WaitForSeconds(invulnerabilityFrame);
-        m_Player.GetComponent<Rigidbody>().isKinematic = false;
-
+        hasBeenEat = false;
         Debug.Log("CoroutineEnd");
+    }
+    private void GetHit()
+    {
+        player_Health.Value = player_Health.Value - hit.hitValue;
     }
 
 }

@@ -2398,7 +2398,7 @@ GameObject:
   - component: {fileID: 1568467660462194732}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2412,7 +2412,7 @@ Transform:
   m_GameObject: {fileID: 1953271650171834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.9999971, y: 0.0000021524338, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2507,6 +2507,7 @@ MonoBehaviour:
   Chunk1: {fileID: 2610209006576872962, guid: a7a3bb5a158c26242a53e181c66ccddd, type: 3}
   Chunk2: {fileID: 3112315593383014395, guid: 27983cda32305fd46bd7fa4fc147ba01, type: 3}
   Chunk3: {fileID: 3112315593383014395, guid: 4e12404f84cf06049903b0a816295973, type: 3}
+  InstanciationDitance: 90.35
 --- !u!114 &-8200660131212489324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2568,6 +2569,7 @@ MonoBehaviour:
   player_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
   m_Player: {fileID: 1953271650171834}
   invulnerabilityFrame: 2
+  hasBeenEat: 0
 --- !u!1 &1956949540428108
 GameObject:
   m_ObjectHideFlags: 0
