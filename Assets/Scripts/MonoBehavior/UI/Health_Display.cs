@@ -6,7 +6,7 @@ public class Health_Display : MonoBehaviour
     [SerializeField] private RSO_Health m_Health;
     [SerializeField] private TextMeshProUGUI m_Healthtxt;
 
-    private void OnEnable() // Abonnement / Désabonnement pour la mise à jour du score.
+    private void OnEnable() // Abonnement / Désabonnement pour la mise à jour de la vie du joueur.
     {
         m_Health.OnHealthChanged += OnHealthChanged;
     }
