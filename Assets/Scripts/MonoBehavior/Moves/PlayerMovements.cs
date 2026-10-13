@@ -54,14 +54,14 @@ public class PlayerMovements : MonoBehaviour
     private void Update()
     {
         playerCurrentPosition.x = Mathf.Lerp(playerCurrentPosition.x, targetLane.x, switchingLaneSpeed * Time.deltaTime);
-        m_Player.transform.position = playerCurrentPosition;
+        transform.position = playerCurrentPosition;
         if (isJumping == true)
         {
-            playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, targetJump.y, jumpSpeed * Time.deltaTime);
+            playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, targetJump.y, (jumpSpeed * Time.deltaTime));
         }
         if (isJumping == false)
         {
-            playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, grounded, jumpSpeed * Time.deltaTime);
+            playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, grounded, (jumpSpeed * Time.deltaTime));
         }
     }
 
