@@ -2412,7 +2412,7 @@ Transform:
   m_GameObject: {fileID: 1953271650171834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.9999957, y: 2.3706655e-13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2567,9 +2567,9 @@ MonoBehaviour:
   slide: {fileID: 3053711318093625519, guid: 1ea7344910982854ab442e186d391e53, type: 3}
   playerCurrentPosition: {x: 0, y: 0, z: 0}
   grounded: 0
-  jumpDuration: 0.8
+  jumpDuration: 0.5
   slideDuration: 0.8
-  jumpSpeed: 4
+  jumpSpeed: 6
   switchingLaneSpeed: 5
 --- !u!1 &1956949540428108
 GameObject:
