@@ -9,7 +9,7 @@ public class WorldSpeedAcceleration : MonoBehaviour
     public float add_Speed;
     void Start()
     {
-        m_AccelerationValue.value = 3f;
+        m_AccelerationValue.value = 5f;
         StartCoroutine(AccelarationCoroutine());
         
     }

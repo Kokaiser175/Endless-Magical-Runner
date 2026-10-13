@@ -27,7 +27,7 @@ public class PlayerMovements : MonoBehaviour
 
     private void Start()
     {
-        m_Player.transform.position = middleAnchor.transform.position;
+        transform.position = middleAnchor.transform.position;
         isJumping = false;
         isSliding = false;
     }
@@ -53,15 +53,15 @@ public class PlayerMovements : MonoBehaviour
     }
     private void Update()
     {
-        playerCurrentPosition.x = Mathf.Lerp(playerCurrentPosition.x, targetLane.x, switchingLaneSpeed * Time.deltaTime);
-        m_Player.transform.position = playerCurrentPosition;
+        playerCurrentPosition.x = Mathf.Lerp(playerCurrentPosition.x, targetLane.x, (switchingLaneSpeed * Time.deltaTime));
+        transform.position = playerCurrentPosition;
         if (isJumping == true)
         {
-            playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, targetJump.y, jumpSpeed * Time.deltaTime);
+            playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, targetJump.y, (jumpSpeed * Time.deltaTime));
         }
         if (isJumping == false)
         {
-            playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, grounded, jumpSpeed * Time.deltaTime);
+            playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, grounded, (jumpSpeed * Time.deltaTime));
         }
     }
 
