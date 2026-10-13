@@ -843,19 +843,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 403261650}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: d43b73d3fb879b14fa3475111279e650, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &403261650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,6 +1293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Start_Instanciation
   m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
   m_DungeonChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+  m_SpawnPosition: {fileID: 6379228780913417383, guid: f616fb28b8731ac4fbddd76a2fa937d5, type: 3}
 --- !u!114 &665193672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,8 +1715,9 @@ GameObject:
   m_Component:
   - component: {fileID: 835405333}
   - component: {fileID: 835405335}
+  - component: {fileID: 835405336}
   m_Layer: 0
-  m_Name: PauseManager
+  m_Name: UIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1764,6 +1754,19 @@ MonoBehaviour:
   endPauseInput: {fileID: 2711448196478312563, guid: 1ea7344910982854ab442e186d391e53, type: 3}
   PausePanel: {fileID: 1922465430}
   pause: {fileID: 11400000, guid: 0df5319f74d7c764280d2a5dbb83a0c0, type: 2}
+--- !u!114 &835405336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835405332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2b6ac82c45f55448a70a5e904b3993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
+  health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
 --- !u!1 &841381756
 GameObject:
   m_ObjectHideFlags: 0
