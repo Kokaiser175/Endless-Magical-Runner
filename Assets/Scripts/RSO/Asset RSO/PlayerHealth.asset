@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85469c02b23b1c845ad72c3977e4754c, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: Assembly-CSharp::RSO_Health
+  m_value: 3
