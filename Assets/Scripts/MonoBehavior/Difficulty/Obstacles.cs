@@ -14,6 +14,7 @@ public class Obstacles : MonoBehaviour
 
     private void Start()
     {
+        hit.hitValue = 1;
         hasBeenEat = false;
     }
 
