@@ -2397,6 +2397,7 @@ GameObject:
   - component: {fileID: 1568467660462194732}
   - component: {fileID: 6267536003159834094}
   - component: {fileID: -8200660131212489324}
+  - component: {fileID: 5678420661658942038}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2598,6 +2599,19 @@ MonoBehaviour:
   slideDuration: 0.8
   jumpSpeed: 6
   switchingLaneSpeed: 5
+--- !u!114 &5678420661658942038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953271650171834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2b6ac82c45f55448a70a5e904b3993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
+  health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
 --- !u!1 &1956949540428108
 GameObject:
   m_ObjectHideFlags: 0

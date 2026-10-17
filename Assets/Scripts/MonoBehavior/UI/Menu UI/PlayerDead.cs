@@ -3,14 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDead : MonoBehaviour
 {
-    [SerializeField] RSO_Health health;
-   public void PlayerisDead()
+    [SerializeField] RSO_Health m_health;
+    public void PlayerisDead(int health)
     {
-        if (health.Value <= 0)
+        health = m_health.m_value;
+        if (health == 0)
         {
             Debug.Log("GameOver");
-            SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Single); // Charge le GameOver
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); // Charge le GameOver
         }
-        
     }
 }
