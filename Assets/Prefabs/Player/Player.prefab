@@ -2396,8 +2396,6 @@ GameObject:
   - component: {fileID: 1067805452908161589}
   - component: {fileID: 1568467660462194732}
   - component: {fileID: 6267536003159834094}
-  - component: {fileID: -8200660131212489324}
-  - component: {fileID: 5678420661658942038}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2572,46 +2570,7 @@ MonoBehaviour:
   jumpDuration: 0.5
   slideDuration: 0.8
   jumpSpeed: 6
-  switchingLaneSpeed: 5
---- !u!114 &-8200660131212489324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953271650171834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1194f65a4a0f52478a408fc9f9efba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovements
-  leftAnchor: {fileID: 1260987390710161382, guid: 6af7de874134e8444abc538f83bedc37, type: 3}
-  middleAnchor: {fileID: 8346202594663599643, guid: e695385d8a16752489f07a0fb266f9ec, type: 3}
-  rightAnchor: {fileID: 6019438717038884419, guid: cb70b9c423939cf4e956edf9f0c935bc, type: 3}
-  heightAnchor: {fileID: 1201171091325015818, guid: 1e9b6c2aed3889c48801ca5e23d29533, type: 3}
-  m_Player: {fileID: 1953271650171834}
-  switchLane: {fileID: 1130247464205992699, guid: 1ea7344910982854ab442e186d391e53, type: 3}
-  jump: {fileID: -4182025700971807714, guid: 1ea7344910982854ab442e186d391e53, type: 3}
-  slide: {fileID: 3053711318093625519, guid: 1ea7344910982854ab442e186d391e53, type: 3}
-  playerCurrentPosition: {x: 0, y: 0, z: 0}
-  grounded: 0
-  jumpDuration: 0.4
-  slideDuration: 0.8
-  jumpSpeed: 6
-  switchingLaneSpeed: 5
---- !u!114 &5678420661658942038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953271650171834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2b6ac82c45f55448a70a5e904b3993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
-  health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+  switchingLaneSpeed: 6
 --- !u!1 &1956949540428108
 GameObject:
   m_ObjectHideFlags: 0

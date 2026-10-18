@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 119763147}
   - component: {fileID: 119763148}
   - component: {fileID: 119763149}
+  - component: {fileID: 119763150}
   m_Layer: 0
   m_Name: PlayerStatManager
   m_TagString: Untagged
@@ -287,6 +288,19 @@ MonoBehaviour:
   m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
   invulnerabilityFrame: 2
   hasBeenEat: 0
+--- !u!114 &119763150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119763144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2b6ac82c45f55448a70a5e904b3993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
+  m_health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
 --- !u!1 &178901968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,7 +1780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2b6ac82c45f55448a70a5e904b3993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
-  health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+  m_health: {fileID: 0}
 --- !u!1 &841381756
 GameObject:
   m_ObjectHideFlags: 0
