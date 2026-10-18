@@ -2394,8 +2394,9 @@ GameObject:
   - component: {fileID: -5811875142244079340}
   - component: {fileID: 2662600293636847994}
   - component: {fileID: 1067805452908161589}
-  - component: {fileID: 1568467660462194732}
   - component: {fileID: 6267536003159834094}
+  - component: {fileID: 8006212888477368368}
+  - component: {fileID: -1130835956048182506}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2507,6 +2508,8 @@ MonoBehaviour:
   Chunk1: {fileID: 2610209006576872962, guid: a7a3bb5a158c26242a53e181c66ccddd, type: 3}
   Chunk2: {fileID: 3112315593383014395, guid: 27983cda32305fd46bd7fa4fc147ba01, type: 3}
   Chunk3: {fileID: 3112315593383014395, guid: 4e12404f84cf06049903b0a816295973, type: 3}
+  Chunk4: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+  Chunk5: {fileID: 3112315593383014395, guid: d0f309949afb8aa4ba44129d2c59abe0, type: 3}
   spawnPoint: {fileID: 6379228780913417383, guid: f616fb28b8731ac4fbddd76a2fa937d5, type: 3}
 --- !u!114 &1067805452908161589
 MonoBehaviour:
@@ -2528,23 +2531,6 @@ MonoBehaviour:
   FireEffectMaterial: {fileID: 2100000, guid: 7760b57fed9516d429fe4541c1336c93, type: 2}
   WizardMaterial: {fileID: 2100000, guid: 84ca4aaa7bafeee42b0818a2fce874ef, type: 2}
   m_Player: {fileID: 1953271650171834}
---- !u!114 &1568467660462194732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953271650171834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77be8b270205c6744aa54cdcfafc46f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Obstacles
-  hit: {fileID: 11400000, guid: 6e0dc87022551194da36efab5ea820c2, type: 2}
-  player_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
-  m_Player: {fileID: 1953271650171834}
-  invulnerabilityFrame: 2
-  hasBeenEat: 0
 --- !u!114 &6267536003159834094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2571,6 +2557,36 @@ MonoBehaviour:
   slideDuration: 0.8
   jumpSpeed: 6
   switchingLaneSpeed: 6
+--- !u!114 &8006212888477368368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953271650171834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2b6ac82c45f55448a70a5e904b3993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
+  m_health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+--- !u!114 &-1130835956048182506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953271650171834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77be8b270205c6744aa54cdcfafc46f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacles
+  hit: {fileID: 11400000, guid: 6e0dc87022551194da36efab5ea820c2, type: 2}
+  player_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+  m_Player: {fileID: 1953271650171834}
+  invulnerabilityFrame: 1
+  hasBeenEat: 0
 --- !u!1 &1956949540428108
 GameObject:
   m_ObjectHideFlags: 0

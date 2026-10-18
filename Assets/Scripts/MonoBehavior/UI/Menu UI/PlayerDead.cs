@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDead : MonoBehaviour
 {
-    [SerializeField] RSO_Health m_health;
+    [SerializeField] private RSO_Health m_health;
 
     private void OnEnable()
     {
@@ -16,7 +16,7 @@ public class PlayerDead : MonoBehaviour
     }
     public void PlayerisDead(int health)
     {
-        if (m_health.Value <= 0) // à 0 point de vie le game over se lance.
+        if (health <= 0) // à 0 point de vie le game over se lance.
         {
             Debug.Log("GameOver");
             SceneManager.LoadScene("GameOver"); // Charge le GameOver

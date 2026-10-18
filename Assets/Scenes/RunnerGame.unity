@@ -205,10 +205,8 @@ GameObject:
   m_Component:
   - component: {fileID: 119763145}
   - component: {fileID: 119763146}
-  - component: {fileID: 119763147}
-  - component: {fileID: 119763148}
-  - component: {fileID: 119763149}
   - component: {fileID: 119763150}
+  - component: {fileID: 119763148}
   m_Layer: 0
   m_Name: PlayerStatManager
   m_TagString: Untagged
@@ -244,19 +242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mana_Manager
   m_mana: {fileID: 11400000, guid: 5d7b4369a8f87ca4e8eaea61342ea653, type: 2}
---- !u!114 &119763147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119763144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 465a7edbdf3147b49a09a68cb80adfed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health_Manager
-  m_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
 --- !u!114 &119763148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,23 +256,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Score_Manager
   m_Value: {fileID: 11400000, guid: c69447640ea90a648add473b851d507a, type: 2}
   speed: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
---- !u!114 &119763149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119763144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77be8b270205c6744aa54cdcfafc46f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Obstacles
-  hit: {fileID: 11400000, guid: 6e0dc87022551194da36efab5ea820c2, type: 2}
-  player_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
-  m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
-  invulnerabilityFrame: 2
-  hasBeenEat: 0
 --- !u!114 &119763150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,10 +265,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 119763144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2b6ac82c45f55448a70a5e904b3993, type: 3}
+  m_Script: {fileID: 11500000, guid: 465a7edbdf3147b49a09a68cb80adfed, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
-  m_health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::Health_Manager
+  m_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
 --- !u!1 &178901968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,7 +1022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   m_AccelerationValue: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
-  add_Speed: 0.1
+  add_Speed: 0.2
 --- !u!4 &479509065
 Transform:
   m_ObjectHideFlags: 0
@@ -1306,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Start_Instanciation
   m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
-  m_DungeonChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+  m_DungeonChunk: {fileID: 3112315593383014395, guid: c490bbed9de2646459803cdcb9588f09, type: 3}
   m_SpawnPosition: {fileID: 6379228780913417383, guid: f616fb28b8731ac4fbddd76a2fa937d5, type: 3}
 --- !u!114 &665193672
 MonoBehaviour:

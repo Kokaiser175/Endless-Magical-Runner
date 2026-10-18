@@ -33,6 +33,14 @@ public class FireSpell : MonoBehaviour
         castSpell.action.Disable();
     }
 
+    private void Update()
+    {
+        if (fire.spellIsActive)
+        {
+            Debug.Log("Sort actif, dégâts actuels : " + hit.hitValue);
+        }
+    }
+
     public void CastFireSpell(InputAction.CallbackContext context) // Methode pour lancer le sort
     {   
         if (fire.cooldownIsActive == true) { return; } // Si la récupération est active on ne peut pas lancer le sort.
@@ -55,7 +63,7 @@ public class FireSpell : MonoBehaviour
         m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = WizardMaterial; // Remet le joueur à sa couleur normale. 
         speedAcceleration.value = speedAcceleration.value * 0.8f; // Ralentit le joueur de sa valeur d'accélération pour retourner à la vitesse normale. 
         fire.spellIsActive = false; // Le sort est inactif.
-        hit.hitValue = 1; // Les obstacles font des dégats normaux. 
+        hit.hitValue = 1; // Les obstacles font des dégats normaux.
         fire.spellEffectCount = 0; // Compteur pour gérer combien d'obstacles peuvent être touchés pendant le sort. Remis à 0 à la fin de la coroutine. 
         StartCoroutine(FireSpellCoolDownCoroutine()); // Lance le délai de récupération du sort. 
     }
@@ -67,7 +75,6 @@ public class FireSpell : MonoBehaviour
     }
     private void FireSpellEffect() // Effets du sort. 
     {
-        
         m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = FireEffectMaterial; // Change l'aspect du joueur pour montrer que le sort est actif.
         speedAcceleration.value = speedAcceleration.value * 1.2f; // Accélère légèrement le joueur. 
         hit.hitValue = 0; // Empêche le joueur de subir les dégats des obstacles. 
@@ -84,17 +91,31 @@ public class FireSpell : MonoBehaviour
                 fire.spellEffectCount--; // Décrémente la valeur par objet touché. 
                 if (fire.spellEffectCount == 0) // Si le joueur touche un obstacle avant la fin du sort. 
                 {
-                    StopCoroutine(FireSpellCoroutine()); // Arrête immédiatement le sort.
-                    m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = WizardMaterial; // Remet le joueur à sa couleur normale.
-                    speedAcceleration.value = speedAcceleration.value * 0.8f; // Ralentit le joueur de sa valeur d'accélération pour retourner à la vitesse normale. 
-                    fire.spellIsActive = false; // Le sort est inactif.
-                    hit.hitValue = 1; // Les obstacles font des dégats normaux. 
-                    fire.spellEffectCount = 0;// Compteur pour gérer combien d'obstacles peuvent être touchés pendant le sort. Remis à 0 instantannément. 
-                    StartCoroutine(FireSpellCoolDownCoroutine());// Coroutine pour gérer le temps de récupération du sort.
+                    speedAcceleration.value *= 0.8f;
+                    StartCoroutine(EndSpellAfterCollision()); // Utilisation d'une coroutine de fin de sort en cas de contact pendant le sort.
+
+                    //StopCoroutine(FireSpellCoroutine()); // Arrête immédiatement le sort.
+                    //m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = WizardMaterial; // Remet le joueur à sa couleur normale.
+                    //speedAcceleration.value = speedAcceleration.value * 0.8f; // Ralentit le joueur de sa valeur d'accélération pour retourner à la vitesse normale. 
+                    //fire.spellIsActive = false; // Le sort est inactif.
+                    //Debug.Log("Le sort se termine : les dégâts repassent à 1");
+                    //hit.hitValue = 1; // Les obstacles font des dégats normaux. 
+                    //fire.spellEffectCount = 0;// Compteur pour gérer combien d'obstacles peuvent être touchés pendant le sort. Remis à 0 instantannément. 
+                    //StartCoroutine(FireSpellCoolDownCoroutine());// Coroutine pour gérer le temps de récupération du sort.
 
                 }
             }
         }
+
         
+    }
+    private IEnumerator EndSpellAfterCollision()
+    {
+        yield return null; // Laisse les autres scripts traiter la collision pour éviter que le joueur prenne bien un dégat pendant le sort. 
+        m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = WizardMaterial;
+        fire.spellIsActive = false;
+        hit.hitValue = 1;
+        fire.spellEffectCount = 0;
+        StartCoroutine(FireSpellCoolDownCoroutine()); // Lance le temps de récupération du sort après utilisation. 
     }
 }
