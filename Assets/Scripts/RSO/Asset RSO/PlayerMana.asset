@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef964d855d92d04cb377e18fc96ada2, type: 3}
   m_Name: PlayerMana
   m_EditorClassIdentifier: Assembly-CSharp::RSO_Mana
-  m_value: 100
+  m_value: 6

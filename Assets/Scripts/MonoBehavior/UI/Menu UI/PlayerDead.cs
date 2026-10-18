@@ -3,14 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDead : MonoBehaviour
 {
-    [SerializeField] RSO_Health m_health;
+    [SerializeField] private RSO_Health m_health;
+
+    private void OnEnable()
+    {
+        m_health.OnHealthChanged += PlayerisDead; //Abonnement et désabonnement au RSO_Health pour avoir la valeur du RSO.
+    }
+
+    private void OnDisable()
+    {
+        m_health.OnHealthChanged -= PlayerisDead;
+    }
     public void PlayerisDead(int health)
     {
-        health = m_health.m_value;
-        if (health == 0)
+        if (health <= 0) // à 0 point de vie le game over se lance.
         {
             Debug.Log("GameOver");
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); // Charge le GameOver
+            SceneManager.LoadScene("GameOver"); // Charge le GameOver
         }
     }
 }

@@ -43,6 +43,9 @@ public class Obstacles : MonoBehaviour
     }
     private void GetHit()
     {
+        Debug.Log("Dégâts reçus : " + hit.hitValue
+           + " | Sort actif : " + /* à vérifier ci-dessous */ "");
+
         player_Health.Value = player_Health.Value - hit.hitValue;
     }
 

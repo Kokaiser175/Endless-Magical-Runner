@@ -6,6 +6,8 @@ public class TriggerInstanciation : MonoBehaviour
     [SerializeField] GameObject Chunk1;
     [SerializeField] GameObject Chunk2;
     [SerializeField] GameObject Chunk3;
+    [SerializeField] GameObject Chunk4;
+    [SerializeField] GameObject Chunk5;
     [SerializeField] GameObject spawnPoint;
     private int value;
 
@@ -21,19 +23,27 @@ public class TriggerInstanciation : MonoBehaviour
         {
             Vector3 spawn = spawnPoint.transform.position;
             
-            if (value <= 33)
+            if (value <= 20)
             {
                 Instantiate(Chunk1, spawn, Quaternion.identity);
             }
-            if (value > 33 && value < 66)
+            if (value > 20 && value <= 39)
             {
                 Instantiate(Chunk2, spawn, Quaternion.identity);
             }
-            if (value >= 66)
+            if (value >= 40 && value <= 69)
             {
                 Instantiate(Chunk3, spawn, Quaternion.identity);
             }
-            
+            if (value >= 70 && value <= 89)
+            {
+                Instantiate(Chunk4, spawn, Quaternion.identity);
+            }
+            if (value >= 90 && value <= 100)
+            {
+                Instantiate(Chunk5, spawn, Quaternion.identity);
+            }
+
         }
     }
 }
