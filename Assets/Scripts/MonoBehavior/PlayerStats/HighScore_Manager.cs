@@ -8,7 +8,7 @@ public class HighScore_Manager : MonoBehaviour
 
     private void OnEnable()
     {
-        m_health.OnHealthChanged += SaveHighScore;
+        m_health.OnHealthChanged += SaveHighScore; //Abonnement / Désabonnement à la vie du joueur
     }
 
     private void OnDisable()
@@ -18,11 +18,29 @@ public class HighScore_Manager : MonoBehaviour
     public void SaveHighScore(int health)
     {
         {
-            if (m_health.Value <= 0)
+            if (m_health.Value <= 0) // à 0 point de vie seulement 
             {
-                m_NewHighScore.Value = m_PlayerScore.Value;
+                AddHighScore(m_PlayerScore.Value);
             }
         }
     }
+    private void AddHighScore(int score) // Methode pour ajouter le HighScore dans l'Array
+    {
+        int[] scores = m_NewHighScore.Values;
 
+        for (int i = 0; i < scores.Length; i++) // lecture du tableau
+        {
+            if (score > scores[i])
+            {
+                for (int j = scores.Length - 1; j > i; j--) // Lecture des HighScore du plus haut au plus bas
+                {
+                    scores[j] = scores[j - 1];
+                }
+
+                scores[i] = score;
+                m_NewHighScore.SetHighScores(scores); // Mise à jour du classement au changement de valeur.
+                break;
+            }
+        }
+    }
 } 

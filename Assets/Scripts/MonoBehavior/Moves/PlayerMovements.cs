@@ -67,7 +67,6 @@ public class PlayerMovements : MonoBehaviour
 
     private void SwitchingLane(InputAction.CallbackContext context)
     {
-        Debug.Log("InputActivé");
         float input = context.ReadValue<Vector2>().x; // Lecture de la valeur X de l'input uniquement
 
         if (input < 0)
@@ -103,7 +102,6 @@ public class PlayerMovements : MonoBehaviour
         if (m_Player.transform.position.y <= 0.5f)
         {
             isJumping = true;
-            Debug.Log("jumpInput");
             targetJump.y = heightAnchor.transform.position.y;
             StartCoroutine(EndJump());
         }
@@ -120,7 +118,6 @@ public class PlayerMovements : MonoBehaviour
         if (isJumping == true) { return; }
         if (isSliding == true) { return; }
             isSliding = true;
-            Debug.Log("Slide Input");
        StartCoroutine(EndSlide());
        
     }
