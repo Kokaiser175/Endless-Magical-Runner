@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 119763146}
   - component: {fileID: 119763150}
   - component: {fileID: 119763148}
+  - component: {fileID: 119763151}
   m_Layer: 0
   m_Name: PlayerStatManager
   m_TagString: Untagged
@@ -269,6 +270,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health_Manager
   m_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+--- !u!114 &119763151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119763144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c2744f4b72d6e4cbb54bf449c099b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HighScore_Manager
+  m_health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+  m_PlayerScore: {fileID: 11400000, guid: c69447640ea90a648add473b851d507a, type: 2}
+  m_NewHighScore: {fileID: 11400000, guid: 916987edb3ee87a43aae839acb9de06b, type: 2}
 --- !u!1 &178901968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +1750,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pause
   PauseInput: {fileID: -4509023891102913794, guid: 1ea7344910982854ab442e186d391e53, type: 3}
-  endPauseInput: {fileID: 2711448196478312563, guid: 1ea7344910982854ab442e186d391e53, type: 3}
   PausePanel: {fileID: 1922465430}
   pause: {fileID: 11400000, guid: 0df5319f74d7c764280d2a5dbb83a0c0, type: 2}
 --- !u!114 &835405336
