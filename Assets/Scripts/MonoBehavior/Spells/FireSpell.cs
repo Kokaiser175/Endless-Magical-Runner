@@ -33,14 +33,6 @@ public class FireSpell : MonoBehaviour
         castSpell.action.Disable();
     }
 
-    private void Update()
-    {
-        if (fire.spellIsActive)
-        {
-            Debug.Log("Sort actif, dégâts actuels : " + hit.hitValue);
-        }
-    }
-
     public void CastFireSpell(InputAction.CallbackContext context) // Methode pour lancer le sort
     {   
         if (fire.cooldownIsActive == true) { return; } // Si la récupération est active on ne peut pas lancer le sort.
@@ -111,7 +103,7 @@ public class FireSpell : MonoBehaviour
     }
     private IEnumerator EndSpellAfterCollision()
     {
-        yield return null; // Laisse les autres scripts traiter la collision pour éviter que le joueur prenne bien un dégat pendant le sort. 
+        yield return new WaitForSeconds(0.01f); // Laisse les autres scripts traiter la collision pour éviter que le joueur prenne bien un dégat pendant le sort. 
         m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = WizardMaterial;
         fire.spellIsActive = false;
         hit.hitValue = 1;

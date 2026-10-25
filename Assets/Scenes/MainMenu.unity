@@ -319,6 +319,8 @@ PrefabInstance:
     - {fileID: 2455072997181064810, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
     - {fileID: 2655216227867256666, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
     - {fileID: 7494166640840795403, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+    - {fileID: 1601502177843378573, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+    - {fileID: 3620599251227089223, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5908822440686125752, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
       insertIndex: 1
@@ -405,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1557,6 +1559,7 @@ PrefabInstance:
     - {fileID: 3554908043943812743, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
     - {fileID: 7977052716109034615, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
     - {fileID: 8173504070277955302, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+    - {fileID: 1601502177843378573, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 198220843366223759, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
       insertIndex: 8

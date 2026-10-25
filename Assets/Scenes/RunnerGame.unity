@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd62feeeefbeb7043bb911f0025463a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChunkMovement
-  m_DungeonChunk: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+  m_DungeonChunk: {fileID: 3112315593383014395, guid: c490bbed9de2646459803cdcb9588f09, type: 3}
   m_AccelerationValue: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
 --- !u!1 &514064338
 GameObject:
@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 714292077}
   - component: {fileID: 714292076}
   - component: {fileID: 714292075}
-  - component: {fileID: 714292074}
+  - component: {fileID: 714292078}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -1593,18 +1593,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &714292074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714292072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b67314eae0c655e499fa0894f6dbc472, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
 --- !u!114 &714292075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1687,6 +1675,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714292072}
   m_CullTransparentMesh: 1
+--- !u!114 &714292078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714292072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf7682218cba194c868f52d80325360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenuFromPause
+  PausePanel: {fileID: 1922465430}
 --- !u!1 &835405332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,7 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2b6ac82c45f55448a70a5e904b3993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDead
-  m_health: {fileID: 0}
+  m_health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
 --- !u!1 &841381756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,7 +2348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: fd8fafce67740d843a22115b87dc8486, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

@@ -1,7 +1,5 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class WorldSpeedAcceleration : MonoBehaviour
 {
@@ -11,7 +9,6 @@ public class WorldSpeedAcceleration : MonoBehaviour
     {
         m_AccelerationValue.value = 8f;
         StartCoroutine(AccelarationCoroutine());
-        
     }
 
     private IEnumerator AccelarationCoroutine()
@@ -20,9 +17,13 @@ public class WorldSpeedAcceleration : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             m_AccelerationValue.value = m_AccelerationValue.value + add_Speed;
-            if (m_AccelerationValue.value >= 20.8f)
+            if (m_AccelerationValue.value < 23.8f)
             {
-                break;
+                add_Speed = 0.2f;
+            }
+            if (m_AccelerationValue.value > 23.8f)
+            {
+                add_Speed = 0;
             }
         }
     }
