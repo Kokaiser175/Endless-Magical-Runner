@@ -9,12 +9,14 @@ public class FireSpell : MonoBehaviour
 {
     [SerializeField] RSO_SpellValue fire;
     [SerializeField] RSO_ObstacleValues hit;
+    [SerializeField] RSO_FireSpellUpgrade spellCountUpgrade;
     [SerializeField] InputActionReference castSpell;
     [SerializeField] RSO_AccelerationValue speedAcceleration;
     [SerializeField] RSO_Mana manaCost;
     [SerializeField] Material FireEffectMaterial;
     [SerializeField] Material WizardMaterial;
     [SerializeField] GameObject m_Player;
+    
 
     private void Start()
     {
@@ -62,7 +64,7 @@ public class FireSpell : MonoBehaviour
     private IEnumerator FireSpellCoolDownCoroutine() // Coroutine pour gérer le temps de récupération du sort. 
     {
         fire.cooldownIsActive = true; // Bloque les lancements le temps de la coroutine. 
-        yield return new WaitForSeconds(fire.spellCoolDowm); // Attend la fin du délai de récupération du sort. 
+        yield return new WaitForSeconds(fire.spellCoolDown); // Attend la fin du délai de récupération du sort. 
         fire.cooldownIsActive = false; // Le délai est terminé, le joueur peut lancer le sort si il a le mana nécessaire. 
     }
     private void FireSpellEffect() // Effets du sort. 
@@ -70,7 +72,9 @@ public class FireSpell : MonoBehaviour
         m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = FireEffectMaterial; // Change l'aspect du joueur pour montrer que le sort est actif.
         speedAcceleration.value = speedAcceleration.value * 1.2f; // Accélère légèrement le joueur. 
         hit.hitValue = 0; // Empêche le joueur de subir les dégats des obstacles. 
-        fire.spellEffectCount = 1; // Compteur pour gérer combien d'obstacles peuvent être touchés pendant la durée du sort. 
+        fire.spellEffectCount = 5; // Compteur pour gérer combien d'obstacles peuvent être touchés pendant la durée du sort. 
+        spellCountUpgrade.Value++;
+        Debug.Log(spellCountUpgrade.Value);
         
     }
     public void OnCollisionEnter(Collision collision) // Gestion des collisions avec les obstacles.

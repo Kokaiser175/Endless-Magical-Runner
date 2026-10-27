@@ -2359,6 +2359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SaveManager
   m_HighScore: {fileID: 11400000, guid: 916987edb3ee87a43aae839acb9de06b, type: 2}
   m_health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+  m_FireSpellUpgrade: {fileID: 11400000, guid: d316ce3adbce5394ba2daad94bb6f24d, type: 2}
 --- !u!1 &1246365396
 GameObject:
   m_ObjectHideFlags: 0

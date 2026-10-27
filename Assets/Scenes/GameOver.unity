@@ -1551,6 +1551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadManager
   m_HighScore: {fileID: 11400000, guid: 916987edb3ee87a43aae839acb9de06b, type: 2}
+  m_FireSpellUpgrade: {fileID: 11400000, guid: d316ce3adbce5394ba2daad94bb6f24d, type: 2}
 --- !u!4 &1281131290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1957358926639794962, guid: 20fec9f75ec918647a3276e1477959ac, type: 3}
