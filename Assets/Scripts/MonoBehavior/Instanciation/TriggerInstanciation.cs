@@ -8,6 +8,7 @@ public class TriggerInstanciation : MonoBehaviour
     [SerializeField] GameObject Chunk3;
     [SerializeField] GameObject Chunk4;
     [SerializeField] GameObject Chunk5;
+    [SerializeField] GameObject Chunk6;
     [SerializeField] GameObject spawnPoint;
     private int value;
 
