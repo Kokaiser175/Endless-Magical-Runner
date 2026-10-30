@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Spell", menuName = "Player_Spell")]
 public class RSO_SpellValue : ScriptableObject
@@ -8,4 +9,5 @@ public class RSO_SpellValue : ScriptableObject
     public bool spellIsActive;
     public bool cooldownIsActive;
     public int spellEffectCount;
+    public int spellEffectValue;
 }

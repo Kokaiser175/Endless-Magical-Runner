@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Spell_Fire
   m_EditorClassIdentifier: Assembly-CSharp::RSO_SpellValue
   spellDuration: 10
-  spellManaCost: 30
-  spellCoolDowm: 5
+  spellManaCost: 25
+  spellCoolDown: 10
   spellIsActive: 0
   cooldownIsActive: 0
   spellEffectCount: 0
+  spellEffectValue: 7

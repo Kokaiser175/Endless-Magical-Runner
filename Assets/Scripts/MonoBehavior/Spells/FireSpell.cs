@@ -72,7 +72,7 @@ public class FireSpell : MonoBehaviour
         m_Player.GetComponentInChildren<SkinnedMeshRenderer>().material = FireEffectMaterial; // Change l'aspect du joueur pour montrer que le sort est actif.
         speedAcceleration.value = speedAcceleration.value * 1.2f; // Accélère légèrement le joueur. 
         hit.hitValue = 0; // Empêche le joueur de subir les dégats des obstacles. 
-        fire.spellEffectCount = 5; // Compteur pour gérer combien d'obstacles peuvent être touchés pendant la durée du sort. 
+        fire.spellEffectCount = fire.spellEffectValue; // Compteur pour gérer combien d'obstacles peuvent être touchés pendant la durée du sort. 
         spellCountUpgrade.Value++;
         Debug.Log(spellCountUpgrade.Value);
         
