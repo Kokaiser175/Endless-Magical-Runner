@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dda58cd57382c44f8c21bebc976aede, type: 3}
   m_Name: Spell_Fire
   m_EditorClassIdentifier: Assembly-CSharp::RSO_SpellValue
-  spellDuration: 5
-  spellManaCost: 30
-  spellCoolDowm: 20
+  spellDuration: 10
+  spellManaCost: 25
+  spellCoolDown: 10
   spellIsActive: 0
   cooldownIsActive: 0
   spellEffectCount: 0
+  spellEffectValue: 7

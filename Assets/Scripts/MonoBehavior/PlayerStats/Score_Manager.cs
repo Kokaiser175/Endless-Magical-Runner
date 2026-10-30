@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Score_Manager : MonoBehaviour
@@ -9,7 +8,6 @@ public class Score_Manager : MonoBehaviour
 
     private void Start()
     {
-        m_Value.Value = 0;
         StartCoroutine(ScoreUp());
     }
 

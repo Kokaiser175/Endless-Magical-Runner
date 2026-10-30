@@ -2397,6 +2397,7 @@ GameObject:
   - component: {fileID: 6267536003159834094}
   - component: {fileID: 8006212888477368368}
   - component: {fileID: -1130835956048182506}
+  - component: {fileID: 834954096133637029}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2525,6 +2526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   fire: {fileID: 11400000, guid: 3a5b3b02a22d30645a30fbf9a2fef761, type: 2}
   hit: {fileID: 11400000, guid: 6e0dc87022551194da36efab5ea820c2, type: 2}
+  spellCountUpgrade: {fileID: 11400000, guid: d316ce3adbce5394ba2daad94bb6f24d, type: 2}
   castSpell: {fileID: -5032503641765294997, guid: 1ea7344910982854ab442e186d391e53, type: 3}
   speedAcceleration: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
   manaCost: {fileID: 11400000, guid: 5d7b4369a8f87ca4e8eaea61342ea653, type: 2}
@@ -2587,6 +2589,20 @@ MonoBehaviour:
   m_Player: {fileID: 1953271650171834}
   invulnerabilityFrame: 1
   hasBeenEat: 0
+--- !u!114 &834954096133637029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953271650171834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45b04ab5483a314a82d81ff7baa3237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FireSpellIsUpgrade
+  m_FireSpellUpdate: {fileID: 11400000, guid: d316ce3adbce5394ba2daad94bb6f24d, type: 2}
+  m_NewFireSpellValue: {fileID: 11400000, guid: 3a5b3b02a22d30645a30fbf9a2fef761, type: 2}
 --- !u!1 &1956949540428108
 GameObject:
   m_ObjectHideFlags: 0

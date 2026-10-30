@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61495c5ff902d514589413a88199b4f6, type: 3}
   m_Name: Pause_State
   m_EditorClassIdentifier: Assembly-CSharp::RSO_PauseState
-  isPaused: 1
+  isPaused: 0
