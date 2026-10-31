@@ -17,5 +17,9 @@ public class Mana_Display : MonoBehaviour
     private void OnManaChanged(int value)
     {
         m_Manatxt.text = value.ToString(); // Charge l'affichage au moment du changement de valeur.
+        if (m_Mana.Value > 100)
+        {
+            m_Mana.Value = 100;
+        }
     }
 }

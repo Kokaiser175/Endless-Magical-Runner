@@ -13,7 +13,7 @@ public class WorldSpeedAcceleration : MonoBehaviour
     {
         m_AudioSource = m_Camera.GetComponent<AudioSource>();
         m_AudioSource.pitch = 1;
-        m_AddPitch = 0.0005f;
+        m_AddPitch = 0.0003f;
         m_AccelerationValue.value = 10f;
         StartCoroutine(AccelarationCoroutine());
     }

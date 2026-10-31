@@ -17,6 +17,10 @@ public class Health_Display : MonoBehaviour
     private void OnHealthChanged(int value)
     {
         m_Healthtxt.text = value.ToString(); // Charge l'affichage au moment du changement de valeur.
+        if (m_Health.Value > 3)
+        {
+            m_Health.Value = 3;
+        }
     }
 }
 

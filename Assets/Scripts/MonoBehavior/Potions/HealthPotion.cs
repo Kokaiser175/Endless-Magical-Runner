@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class HealthPotion : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] RSO_Health m_Health;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            m_Health.Value++;
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

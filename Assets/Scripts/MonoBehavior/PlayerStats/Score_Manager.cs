@@ -8,6 +8,7 @@ public class Score_Manager : MonoBehaviour
 
     private void Start()
     {
+        m_Value.Value = 0;
         StartCoroutine(ScoreUp());
     }
 

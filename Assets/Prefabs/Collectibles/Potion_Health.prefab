@@ -311,6 +311,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3190804464218092640}
+  - component: {fileID: 5722305142932884736}
+  - component: {fileID: 3874820371019656307}
+  - component: {fileID: 9139698721349689410}
   m_Layer: 0
   m_Name: Potion_Health
   m_TagString: Untagged
@@ -327,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 7933444200847672980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2838626, y: 1.483535, z: 15.581448}
+  m_LocalPosition: {x: -4.2838626, y: 1.483535, z: -1271.9254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -336,3 +339,52 @@ Transform:
   - {fileID: 7556928434085282142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5722305142932884736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933444200847672980}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3874820371019656307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933444200847672980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9e687b01576494abfa1c18a86e3a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthPotion
+  m_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
+--- !u!114 &9139698721349689410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7933444200847672980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b3541c8bc869048abbd000d5fbbe38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionMovement
+  m_AccelerationValue: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
+  m_PotionMana: {fileID: 7933444200847672980}
+  m_PotionHealth: {fileID: 9154678762213418885, guid: 4763bed996bf86d4095a5c1851d9eef4, type: 3}

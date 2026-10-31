@@ -8,6 +8,7 @@ TagManager:
   - SpawnTrigger
   - Chunk
   - Obstacle
+  - AnchorPosition
   layers:
   - Default
   - TransparentFX
