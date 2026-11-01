@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -32,7 +33,7 @@ public class PlayerMovements : MonoBehaviour
         isSliding = false;
     }
 
-    private void OnEnable()
+    private void OnEnable() // Abonnement / Désabonnement pour les inputs
     {
         switchLane.action.Enable();
         switchLane.action.performed += SwitchingLane;
@@ -53,13 +54,14 @@ public class PlayerMovements : MonoBehaviour
     }
     private void Update()
     {
-        playerCurrentPosition.x = Mathf.Lerp(playerCurrentPosition.x, targetLane.x, (switchingLaneSpeed * Time.deltaTime));
+        playerCurrentPosition.x = Mathf.Lerp(playerCurrentPosition.x, targetLane.x, (switchingLaneSpeed * Time.deltaTime)); // On déplace le joueur vers le couloir ciblé.
         transform.position = playerCurrentPosition;
-        if (isJumping == true)
+
+        if (isJumping == true) // Si le booléen qui gère le saut est vrai, on déplace le joueur vers l'ancre en hauteur. 
         {
             playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, targetJump.y, (jumpSpeed * Time.deltaTime));
         }
-        if (isJumping == false)
+        if (isJumping == false)// Si le booléen qui gère le saut est faux, on déplace le joueur vers l'ancre au sol. 
         {
             playerCurrentPosition.y = Mathf.Lerp(playerCurrentPosition.y, grounded, (jumpSpeed * Time.deltaTime));
         }
@@ -81,7 +83,7 @@ public class PlayerMovements : MonoBehaviour
         }
         if (currentCorridor == -1)
         {
-            targetLane.x = leftAnchor.transform.position.x;  // déplacement sur le couloir avec la valeur de l'int currentCorridor
+            targetLane.x = leftAnchor.transform.position.x;  // Déplacement sur le couloir avec la valeur de l'int currentCorridor
 
         }
         if (currentCorridor == 0)
@@ -95,37 +97,37 @@ public class PlayerMovements : MonoBehaviour
 
         }
     }
-    private void Jumping(InputAction.CallbackContext context)
+    private void Jumping(InputAction.CallbackContext context) // Fonction du saut
     {
-        if (isSliding == true) { return; }
-        if (isJumping == true) { return; }
-        if (m_Player.transform.position.y <= 0.5f)
+        if (isSliding == true) { return; } // Si on glisse pas de saut
+        if (isJumping == true) { return; } // Si on jump pas de saut pendant le jump
+        if (m_Player.transform.position.y <= 0.5f) // Si on est à 0.5f de haut. 
         {
-            isJumping = true;
-            targetJump.y = heightAnchor.transform.position.y;
-            StartCoroutine(EndJump());
+            isJumping = true; // Lors du saut le booléen passe à vrai pour la durée du saut.
+            targetJump.y = heightAnchor.transform.position.y; // Le point cible prend les coordonées de l'ancre haute. 
+            StartCoroutine(EndJump()); // On lance la coroutine ajuster la longueur du saut. 
         }
         else return;
            
     }
     private IEnumerator EndJump()
     {
-        yield return new WaitForSeconds(jumpDuration);
-        isJumping = false;
+        yield return new WaitForSeconds(jumpDuration); // On attend la fin de la durée du saut. 
+        isJumping = false; // Le saut est terminé on peut resauter. 
     }
-    private void Sliding(InputAction.CallbackContext context)
+    private void Sliding(InputAction.CallbackContext context) // Fonction de la glissade.
     {
-        if (isJumping == true) { return; }
-        if (isSliding == true) { return; }
-            isSliding = true;
-       StartCoroutine(EndSlide());
+        if (isJumping == true) { return; } // Si on saute pas de glissade
+        if (isSliding == true) { return; } // Si on glisse, pas de glissade pendant la glissade.
+            isSliding = true; // Lors de la glissade le booléen passe à vrai pour la durée de la glissade.
+       StartCoroutine(EndSlide()); // On lance la coroutine qui gère la glissade. 
        
     }
     private IEnumerator EndSlide()
     {
-        m_Player.transform.rotation = new Quaternion(-90f, 0, 0, 90);
-        yield return new WaitForSeconds(slideDuration);
-        m_Player.transform.rotation = Quaternion.identity;
-        isSliding = false;
+        m_Player.transform.rotation = new Quaternion(-90f, 0, 0, 90); // Le joueur pivote.
+        yield return new WaitForSeconds(slideDuration); // On attend la fin de la durée de la glissade
+        m_Player.transform.rotation = Quaternion.identity; // On remet le joueur dans sa position d'origine.
+        isSliding = false; // On peut de nouveau glisser. 
     }
 }

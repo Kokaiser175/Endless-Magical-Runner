@@ -5,7 +5,7 @@ public class FireSpellIsUpgrade : MonoBehaviour
     [SerializeField] RSO_FireSpellUpgrade m_FireSpellUpdate;
     [SerializeField] RSO_SpellValue m_NewFireSpellValue;
 
-    public void Start()
+    public void Start() // On démarrage on vérifie combien de fois le sort de feu est lancé et les valeurs se mettent à jour en fonction de la valeur actuelle. 
     {
         if (m_FireSpellUpdate.Value < 10)
         {

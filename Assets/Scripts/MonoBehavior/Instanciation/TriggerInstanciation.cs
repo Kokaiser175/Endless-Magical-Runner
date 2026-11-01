@@ -18,18 +18,18 @@ public class TriggerInstanciation : MonoBehaviour
     [SerializeField] GameObject m_ManaPotion;
 
     private int value;
-    private List<Vector3> m_AnchorPositions = new List<Vector3>();
+    private List<Vector3> m_AnchorPositions = new List<Vector3>(); //Liste des différentes ancres.
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player")) { return; }
 
-        value = Random.Range(0, 100);
+        value = Random.Range(0, 100); // value prend la valeur du Random Range.
 
-        if (other.gameObject.CompareTag("SpawnTrigger"))
+        if (other.gameObject.CompareTag("SpawnTrigger")) // Si le joueur touche la hit box avec le tag SpawnTrigger.
         {
-            Vector3 spawn = spawnPoint.transform.position;
-            GameObject newChunk = null;
+            Vector3 spawn = spawnPoint.transform.position; // On récupère la position du spawn point dans une variable locale. 
+            GameObject newChunk = null; // On crée une variable Gameobject qui deviendra le Chunk instancié. 
 
 
             if (value < 10)
@@ -61,30 +61,30 @@ public class TriggerInstanciation : MonoBehaviour
             SpawnPotions();
         }
     }
-    private void GetAnchorPositions(GameObject chunk)
+    private void GetAnchorPositions(GameObject chunk) // On ajoute les position des ancres dans la liste au moment de l'instanciation
     {
-        m_AnchorPositions.Clear();
+        m_AnchorPositions.Clear(); // On vide la liste pour ne garder que la position du chunk instancié
 
-        foreach (Transform anchor in chunk.GetComponentsInChildren<Transform>())
+        foreach (Transform anchor in chunk.GetComponentsInChildren<Transform>()) // On parcours tout les composants "ancres" du Chunk instancié pour en récupérer le Transform. 
         {
-            if (anchor.CompareTag("AnchorPosition"))
+            if (anchor.CompareTag("AnchorPosition")) // On vérifie avec un tag de ne récupérer que les Transform des ancres. 
             {
-                m_AnchorPositions.Add(anchor.position);
+                m_AnchorPositions.Add(anchor.position); // On ajoute les positions à la liste. 
             }
         }
         Debug.Log("Nombre d'ancres : " + m_AnchorPositions.Count);
     }
 
-    private void SpawnPotions()
+    private void SpawnPotions() // On place aléatoirement 1 seule position à la position des ancres dans la liste. 
     {
-        int randomIndex = Random.Range(0, m_AnchorPositions.Count);
-        Vector3 position = m_AnchorPositions[randomIndex];
+        int randomIndex = Random.Range(0, m_AnchorPositions.Count); // On choisit une ancre avec un random range.
+        Vector3 position = m_AnchorPositions[randomIndex]; // La position devient celle de l'ancre choisit. 
 
-            if (Random.Range(0, 100) < 50)
+            if (Random.Range(0, 100) < 50) // Si le random Range est supérieur à 50 une potion apparaît. 
             {
-                GameObject potion = Random.Range(0, 2) == 0
-                    ? m_HealthPotion
-                    : m_ManaPotion;
+                GameObject potion = Random.Range(0, 2) == 0 // opérateur ternaire pour choisir quelle potion instancier. (2, est ici, toujours exclu)
+                    ? m_HealthPotion // Si le résultat vaut 0 c'est HealthPotion
+                    : m_ManaPotion; // Si le resultat vaut 1 c'est ManaPotion
 
                 Instantiate(potion, position, Quaternion.identity);
             }

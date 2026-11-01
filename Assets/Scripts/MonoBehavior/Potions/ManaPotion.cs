@@ -9,8 +9,8 @@ public class ManaPotion : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            m_Mana.Value = m_Mana.Value + m_ManaPotionValue;
-            Destroy(gameObject);
+            m_Mana.Value = m_Mana.Value + m_ManaPotionValue; // Lors d'une collision, on ajoute la valeur sérialisé à la réserve de mana. 
+            Destroy(gameObject); // On détruit la potion. 
         }
     }
 }

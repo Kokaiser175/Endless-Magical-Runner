@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Net.Http.Headers;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Obstacles : MonoBehaviour
@@ -10,43 +7,37 @@ public class Obstacles : MonoBehaviour
     [SerializeField] RSO_Health player_Health;
     [SerializeField] GameObject m_Player;
     public float invulnerabilityFrame;
-    public bool hasBeenEat;
+    public bool hasBeenHit;
 
     private void Start()
     {
-        hit.hitValue = 1;
-        hasBeenEat = false;
+        hit.hitValue = 1; // Valeur de dégat de base d'un obstacle. 
+        hasBeenHit = false; // booléen qui gère si le joueur est touché ou non. 
     }
 
     public void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle")) // A la collision on compare le tag pour savoir si on touche bien un obstacle. 
         {
-               if (hasBeenEat == false)
+               if (hasBeenHit == false) // Si le booléen est faux on lance la coroutine. 
                 {
-                Debug.Log("hit");
-                StartCoroutine(InvincibilityFrame());
+                StartCoroutine(InvincibilityFrame()); 
                 }
-            else { return; }
+            else { return; } // Si le booléen est vrai on renvoi la fonction, le joueur ne peut pas prendre de dégât. 
         }
         
     }
     private IEnumerator InvincibilityFrame()
     {
-        Debug.Log("CoroutineStart");
-        GetHit();
-        hasBeenEat = true;
-        yield return new WaitForSeconds(invulnerabilityFrame);
-        hasBeenEat = false;
-        Debug.Log("CoroutineEnd");
+        GetHit(); // On appelle la fonction qui gère les dégats.
+        hasBeenHit = true; // Ensuite on passe le booléen à vrai. 
+        yield return new WaitForSeconds(invulnerabilityFrame); // On attend que l'invulnérabilité du joueur se termine.
+        hasBeenHit = false; // On repasse le booléen à faux pour pouvoir reprendre un dégât.
     }
     private void GetHit()
     {
-        Debug.Log("Dégâts reçus : " + hit.hitValue
-           + " | Sort actif : " + /* à vérifier ci-dessous */ "");
-
-        player_Health.Value = player_Health.Value - hit.hitValue;
+        player_Health.Value = player_Health.Value - hit.hitValue; // On réduit la vie du joueur de la valeur de dégât de l'obstacle. 
     }
 
 }

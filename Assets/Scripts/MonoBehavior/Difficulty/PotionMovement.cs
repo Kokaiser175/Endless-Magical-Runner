@@ -8,7 +8,7 @@ public class PotionMovement : MonoBehaviour
 
     private void Update()
     {
-        PotionSpeed();
+        PotionSpeed(); // On déplace les potions à la même vitesse que le chunk. 
     }
     private void PotionSpeed()
     {

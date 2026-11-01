@@ -8,11 +8,11 @@ public class Start_Instanciation : MonoBehaviour
 
     private void Awake()
     {
-        Instantiate(m_Player);
+        Instantiate(m_Player); // Instancie le joueur.
     }
     private void Start()
     {
-        Instantiate(m_DungeonChunk, new Vector3(0f, -0.5f, 0f), Quaternion.identity);
+        Instantiate(m_DungeonChunk, new Vector3(0f, -0.5f, 0f), Quaternion.identity); // Instancie le chunk de départ
   
     }
 }

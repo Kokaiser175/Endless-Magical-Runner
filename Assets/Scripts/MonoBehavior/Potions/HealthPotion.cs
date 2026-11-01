@@ -9,8 +9,8 @@ public class HealthPotion : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            m_Health.Value++;
-            Destroy(gameObject);
+            m_Health.Value++; // On ajoute 1 point de vie à la collision.
+            Destroy(gameObject); // On détruit la potion. 
         }
     }
 
