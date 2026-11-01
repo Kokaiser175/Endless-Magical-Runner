@@ -2512,10 +2512,13 @@ MonoBehaviour:
   Chunk4: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
   Chunk5: {fileID: 3112315593383014395, guid: d0f309949afb8aa4ba44129d2c59abe0, type: 3}
   Chunk6: {fileID: 3112315593383014395, guid: 7b6e20f317a6bf94a8266355ff6e831d, type: 3}
+  Chunk7: {fileID: 3112315593383014395, guid: ca989f35b6b25a440b16230adbcbaac4, type: 3}
+  Chunk8: {fileID: 3112315593383014395, guid: 475585d0e8283854ba6ab9ad0f1d4140, type: 3}
+  Chunk9: {fileID: 3112315593383014395, guid: 9565068ef2081c64f8375b986f18bea7, type: 3}
+  Chunk10: {fileID: 3112315593383014395, guid: c490bbed9de2646459803cdcb9588f09, type: 3}
   spawnPoint: {fileID: 6379228780913417383, guid: f616fb28b8731ac4fbddd76a2fa937d5, type: 3}
   m_HealthPotion: {fileID: 7933444200847672980, guid: dec371153e95daa4db91c36400093526, type: 3}
   m_ManaPotion: {fileID: 9154678762213418885, guid: 4763bed996bf86d4095a5c1851d9eef4, type: 3}
-  m_SpawnAnchorPosition: {fileID: 1947114840043060687, guid: 0bdae192e8c733d43a7a6505b81ceb03, type: 3}
 --- !u!114 &1067805452908161589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2592,7 +2595,7 @@ MonoBehaviour:
   player_Health: {fileID: 11400000, guid: 5c0b6c82c52b70444be1f640d0d99de4, type: 2}
   m_Player: {fileID: 1953271650171834}
   invulnerabilityFrame: 1
-  hasBeenEat: 0
+  hasBeenHit: 0
 --- !u!114 &834954096133637029
 MonoBehaviour:
   m_ObjectHideFlags: 0

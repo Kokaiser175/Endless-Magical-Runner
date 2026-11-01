@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using LitMotion;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,10 @@ public class TriggerInstanciation : MonoBehaviour
     [SerializeField] GameObject Chunk4;
     [SerializeField] GameObject Chunk5;
     [SerializeField] GameObject Chunk6;
+    [SerializeField] GameObject Chunk7;
+    [SerializeField] GameObject Chunk8;
+    [SerializeField] GameObject Chunk9;
+    [SerializeField] GameObject Chunk10;
 
     [SerializeField] GameObject spawnPoint;
     [SerializeField] GameObject m_HealthPotion;
@@ -31,7 +36,6 @@ public class TriggerInstanciation : MonoBehaviour
             Vector3 spawn = spawnPoint.transform.position; // On récupère la position du spawn point dans une variable locale. 
             GameObject newChunk = null; // On crée une variable Gameobject qui deviendra le Chunk instancié. 
 
-
             if (value < 10)
             {
                 newChunk = Instantiate(Chunk1, spawn, Quaternion.identity);
@@ -40,22 +44,39 @@ public class TriggerInstanciation : MonoBehaviour
             {
                 newChunk = Instantiate(Chunk2, spawn, Quaternion.identity);
             }
-            if (value >= 20 && value <= 39)
+            if (value >= 20 && value <= 29)
             {
                 newChunk = Instantiate(Chunk3, spawn, Quaternion.identity);
             }
-            if (value >= 40 && value <= 69)
+            if (value >= 30 && value <= 39)
             {
                 newChunk = Instantiate(Chunk4, spawn, Quaternion.identity);
             }
-            if (value >= 70 && value <= 89)
+            if (value >= 40 && value <= 49)
             {
                 newChunk = Instantiate(Chunk5, spawn, Quaternion.identity);
             }
-            if (value >= 90 && value <= 100)
+            if (value >= 50 && value <= 59)
             {
                 newChunk = Instantiate(Chunk6, spawn, Quaternion.identity);
             }
+            if (value >= 60 && value <= 69)
+            {
+                newChunk = Instantiate(Chunk7, spawn, Quaternion.identity);
+            }
+            if (value >= 70 && value <= 79)
+            {
+                newChunk = Instantiate(Chunk8, spawn, Quaternion.identity);
+            }
+            if (value >= 80 && value <= 89)
+            {
+                newChunk = Instantiate(Chunk9, spawn, Quaternion.identity);
+            }
+            if (value >= 90 && value <= 100)
+            {
+                newChunk = Instantiate(Chunk10, spawn, Quaternion.identity);
+            }
+
 
             GetAnchorPositions(newChunk);
             SpawnPotions();

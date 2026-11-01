@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Start_Instanciation
   m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
-  m_DungeonChunk: {fileID: 3112315593383014395, guid: c490bbed9de2646459803cdcb9588f09, type: 3}
+  m_DungeonChunk: {fileID: 3112315593383014395, guid: 27225bc76eb04da429b81b5ceb761ff0, type: 3}
   m_SpawnPosition: {fileID: 6379228780913417383, guid: f616fb28b8731ac4fbddd76a2fa937d5, type: 3}
 --- !u!114 &665193672
 MonoBehaviour:
