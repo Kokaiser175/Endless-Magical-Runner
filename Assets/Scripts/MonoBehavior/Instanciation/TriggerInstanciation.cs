@@ -1,6 +1,3 @@
-using JetBrains.Annotations;
-using LitMotion;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,11 +22,14 @@ public class TriggerInstanciation : MonoBehaviour
     private int value;
     private List<Vector3> m_AnchorPositions = new List<Vector3>(); //Liste des différentes ancres.
 
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player")) { return; }
+        
+        if (other.gameObject.CompareTag("Player")) { return; } // Pour éviter une double activation on renvoi si le tag est celui du joueur. 
 
         value = Random.Range(0, 100); // value prend la valeur du Random Range.
+        Debug.Log(value);
 
         if (other.gameObject.CompareTag("SpawnTrigger")) // Si le joueur touche la hit box avec le tag SpawnTrigger.
         {
