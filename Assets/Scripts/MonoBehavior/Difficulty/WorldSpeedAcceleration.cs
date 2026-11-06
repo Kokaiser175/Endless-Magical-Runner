@@ -30,7 +30,6 @@ public class WorldSpeedAcceleration : MonoBehaviour
             }
             if (m_AccelerationValue.value > 25.8f) // à la valeur max on bloque l'augmentation.
             {
-                m_Camera.GetComponents<AudioSource>();
                 m_AudioSource.pitch += 0f;
                 add_Speed = 0;
             }

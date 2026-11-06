@@ -102,8 +102,6 @@ public class FireSpell : MonoBehaviour
                 }
             }
         }
-
-        
     }
     private IEnumerator EndSpellAfterCollision()
     {
