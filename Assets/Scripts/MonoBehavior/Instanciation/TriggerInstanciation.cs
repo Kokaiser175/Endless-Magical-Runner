@@ -101,7 +101,7 @@ public class TriggerInstanciation : MonoBehaviour
         int randomIndex = Random.Range(0, m_AnchorPositions.Count); // On choisit une ancre avec un random range.
         Vector3 position = m_AnchorPositions[randomIndex]; // La position devient celle de l'ancre choisit. 
 
-            if (Random.Range(0, 100) < 50) // Si le random Range est supérieur à 50 une potion apparaît. 
+            if (Random.Range(0, 100) < 50) // Si le random Range est inférieur à 50 une potion apparaît. 
             {
                 GameObject potion = Random.Range(0, 2) == 0 // opérateur ternaire pour choisir quelle potion instancier. (2, est ici, toujours exclu)
                     ? m_HealthPotion // Si le résultat vaut 0 c'est HealthPotion

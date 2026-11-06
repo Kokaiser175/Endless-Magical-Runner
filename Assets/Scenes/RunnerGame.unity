@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd62feeeefbeb7043bb911f0025463a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChunkMovement
-  m_DungeonChunk: {fileID: 3112315593383014395, guid: c490bbed9de2646459803cdcb9588f09, type: 3}
+  m_DungeonChunk: {fileID: 3112315593383014395, guid: 27225bc76eb04da429b81b5ceb761ff0, type: 3}
   m_AccelerationValue: {fileID: 11400000, guid: fae6a0c11805a3e4cb2c7221db963988, type: 2}
 --- !u!1 &514064338
 GameObject:
