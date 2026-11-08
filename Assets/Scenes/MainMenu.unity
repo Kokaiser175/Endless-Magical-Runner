@@ -3670,7 +3670,7 @@ GameObject:
   - component: {fileID: 740699456}
   - component: {fileID: 740699455}
   m_Layer: 5
-  m_Name: ButtonControl
+  m_Name: ButtonControlPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4756,10 +4756,10 @@ RectTransform:
   m_Children:
   - {fileID: 1644651273}
   - {fileID: 535768439}
-  - {fileID: 239203598}
-  - {fileID: 82654991}
   - {fileID: 123098912}
   - {fileID: 463694315}
+  - {fileID: 239203598}
+  - {fileID: 82654991}
   - {fileID: 1713641863}
   - {fileID: 740699453}
   - {fileID: 1236785510}
