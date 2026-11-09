@@ -27,4 +27,5 @@ public class PotionPanelManager : MonoBehaviour
             panelIsInactive = true;
         }
     }
+
 }

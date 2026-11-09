@@ -14,7 +14,6 @@ public class TriggerInstanciation : MonoBehaviour
     [SerializeField] GameObject Chunk8;
     [SerializeField] GameObject Chunk9;
     [SerializeField] GameObject Chunk10;
-
     [SerializeField] GameObject spawnPoint;
     [SerializeField] GameObject m_HealthPotion;
     [SerializeField] GameObject m_ManaPotion;

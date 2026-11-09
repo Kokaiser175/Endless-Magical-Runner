@@ -1391,10 +1391,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Start_Instanciation
   m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
-  m_DungeonChunk: {fileID: 3112315593383014395, guid: 27225bc76eb04da429b81b5ceb761ff0, type: 3}
   m_DungeonChunkTuto1: {fileID: 3112315593383014395, guid: 58c2866c4258a414a9110dc97aa30dee, type: 3}
   m_DungeonChunkTuto2: {fileID: 3112315593383014395, guid: 5d2311e06afd7a040aaabcabb5e62ca0, type: 3}
-  m_SpawnPosition: {fileID: 6379228780913417383, guid: f616fb28b8731ac4fbddd76a2fa937d5, type: 3}
+  Chunk1: {fileID: 2610209006576872962, guid: a7a3bb5a158c26242a53e181c66ccddd, type: 3}
+  Chunk2: {fileID: 3112315593383014395, guid: 27983cda32305fd46bd7fa4fc147ba01, type: 3}
+  Chunk3: {fileID: 3112315593383014395, guid: 4e12404f84cf06049903b0a816295973, type: 3}
+  Chunk4: {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+  Chunk5: {fileID: 3112315593383014395, guid: d0f309949afb8aa4ba44129d2c59abe0, type: 3}
+  Chunk6: {fileID: 3112315593383014395, guid: 7b6e20f317a6bf94a8266355ff6e831d, type: 3}
+  Chunk7: {fileID: 3112315593383014395, guid: ca989f35b6b25a440b16230adbcbaac4, type: 3}
+  Chunk8: {fileID: 3112315593383014395, guid: 475585d0e8283854ba6ab9ad0f1d4140, type: 3}
+  Chunk9: {fileID: 3112315593383014395, guid: 9565068ef2081c64f8375b986f18bea7, type: 3}
+  Chunk10: {fileID: 3112315593383014395, guid: c490bbed9de2646459803cdcb9588f09, type: 3}
+  m_TutoriaState: {fileID: 11400000, guid: 9d99e3750aa7c684ca3ffda1b96306df, type: 2}
+  m_Chunk:
+  - {fileID: 2610209006576872962, guid: a7a3bb5a158c26242a53e181c66ccddd, type: 3}
+  - {fileID: 3112315593383014395, guid: 27983cda32305fd46bd7fa4fc147ba01, type: 3}
+  - {fileID: 3112315593383014395, guid: 4e12404f84cf06049903b0a816295973, type: 3}
+  - {fileID: 3112315593383014395, guid: fb368c2ee401b1e4ba7d0cbae5f9e49e, type: 3}
+  - {fileID: 3112315593383014395, guid: d0f309949afb8aa4ba44129d2c59abe0, type: 3}
+  - {fileID: 3112315593383014395, guid: 7b6e20f317a6bf94a8266355ff6e831d, type: 3}
+  - {fileID: 3112315593383014395, guid: ca989f35b6b25a440b16230adbcbaac4, type: 3}
+  - {fileID: 3112315593383014395, guid: 475585d0e8283854ba6ab9ad0f1d4140, type: 3}
+  - {fileID: 3112315593383014395, guid: 9565068ef2081c64f8375b986f18bea7, type: 3}
+  - {fileID: 3112315593383014395, guid: c490bbed9de2646459803cdcb9588f09, type: 3}
 --- !u!114 &665193672
 MonoBehaviour:
   m_ObjectHideFlags: 0
