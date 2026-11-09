@@ -1332,6 +1332,7 @@ GameObject:
   - component: {fileID: 665193670}
   - component: {fileID: 665193671}
   - component: {fileID: 665193672}
+  - component: {fileID: 665193674}
   - component: {fileID: 665193669}
   - component: {fileID: 665193673}
   m_Layer: 0
@@ -1391,6 +1392,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Start_Instanciation
   m_Player: {fileID: 1953271650171834, guid: 45783f80817b01449864236be7b8e695, type: 3}
   m_DungeonChunk: {fileID: 3112315593383014395, guid: 27225bc76eb04da429b81b5ceb761ff0, type: 3}
+  m_DungeonChunkTuto1: {fileID: 3112315593383014395, guid: 58c2866c4258a414a9110dc97aa30dee, type: 3}
+  m_DungeonChunkTuto2: {fileID: 3112315593383014395, guid: 5d2311e06afd7a040aaabcabb5e62ca0, type: 3}
   m_SpawnPosition: {fileID: 6379228780913417383, guid: f616fb28b8731ac4fbddd76a2fa937d5, type: 3}
 --- !u!114 &665193672
 MonoBehaviour:
@@ -1431,6 +1434,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &665193674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665193667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df42c67fac0e0844dae6aa9247705f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destroy_Potions
 --- !u!1 &688987301
 GameObject:
   m_ObjectHideFlags: 0

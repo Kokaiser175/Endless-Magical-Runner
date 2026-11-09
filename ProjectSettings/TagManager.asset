@@ -9,6 +9,7 @@ TagManager:
   - Chunk
   - Obstacle
   - AnchorPosition
+  - Potion
   layers:
   - Default
   - TransparentFX
